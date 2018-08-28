@@ -6,10 +6,11 @@
     <title>Charles&#39;s Blog</title>
     
     
-        <meta name="keywords" content="123" />
+        <meta name="keywords" content="關鍵字" />
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
     <meta name="description" content="MyFirstBlog">
+<meta name="keywords" content="關鍵字">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Charles&#39;s Blog">
 <meta property="og:url" content="https://caocharles.github.io/index.html">
@@ -66,7 +67,7 @@
                 
                     <a class="main-nav-link" href="/">首頁</a>
                 
-                    <a class="main-nav-link" href="/archives">歸檔</a>
+                    <a class="main-nav-link" href="/archives">時間軸</a>
                 
                     <a class="main-nav-link" href="/categories">分類</a>
                 
@@ -131,7 +132,7 @@
                 
                     <td><a class="main-nav-link" href="/">首頁</a></td>
                 
-                    <td><a class="main-nav-link" href="/archives">歸檔</a></td>
+                    <td><a class="main-nav-link" href="/archives">時間軸</a></td>
                 
                     <td><a class="main-nav-link" href="/categories">分類</a></td>
                 
@@ -166,11 +167,11 @@
         </div>
         <div class="article-info profile-block">
             <div class="article-info-block">
-                2
+                3
                 <span>文章</span>
             </div>
             <div class="article-info-block">
-                0
+                4
                 <span>標籤</span>
             </div>
         </div>
@@ -210,24 +211,237 @@
                 <aside id="sidebar">
    
         
+    <div class="widget-wrap" id='categories'>
+        <h3 class="widget-title">
+            <span>分類</span>
+            &nbsp;
+            <a id='allExpand' href="#">
+                <i class="fa fa-angle-double-up fa-2x"></i>
+            </a>
+        </h3>
+        
+        
+        
+         <ul class="unstyled" id="tree" style="display: block;"> 
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder-open"></i>
+                            &nbsp;
+                            機器學習
+                        </a>
+                         <ul class="unstyled" id="tree" style="display: block;">  <li class="file"><a href="/EM演算法/">EM演算法</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder-open"></i>
+                            &nbsp;
+                            這是分類
+                        </a>
+                         <ul class="unstyled" id="tree" style="display: block;"> 
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder-open"></i>
+                            &nbsp;
+                            這是子分類
+                        </a>
+                         <ul class="unstyled" id="tree" style="display: block;">  <li class="file"><a href="/我的測試文章/">我的測試文章</a></li>  </ul> 
+                    </li> 
+                     </ul> 
+                    </li> 
+                     <li class="file"><a href="/hello-world/">Hello World</a></li>  </ul> 
+    </div>
+    <script>
+        $(document).ready(function() {
+            var iconFolderOpenClass  = 'fa-folder-open';
+            var iconFolderCloseClass = 'fa-folder';
+            var iconAllExpandClass = 'fa-angle-double-down';
+            var iconAllPackClass = 'fa-angle-double-up';
+            // Handle directory-tree expansion:
+            // 左鍵單獨展開目錄
+            $(document).on('click', '#categories a[data-role="directory"]', function (event) {
+                event.preventDefault();
+
+                var icon = $(this).children('.fa');
+                var expanded = icon.hasClass(iconFolderOpenClass);
+                var subtree = $(this).siblings('ul');
+                icon.removeClass(iconFolderOpenClass).removeClass(iconFolderCloseClass);
+                if (expanded) {
+                    if (typeof subtree != 'undefined') {
+                        subtree.slideUp({ duration: 100 });
+                    }
+                    icon.addClass(iconFolderCloseClass);
+                } else {
+                    if (typeof subtree != 'undefined') {
+                        subtree.slideDown({ duration: 100 });
+                    }
+                    icon.addClass(iconFolderOpenClass);
+                }
+            });
+            // 右鍵展開下屬所有目錄
+            $('#categories a[data-role="directory"]').bind("contextmenu", function(event){
+                event.preventDefault();
+                
+                var icon = $(this).children('.fa');
+                var expanded = icon.hasClass(iconFolderOpenClass);
+                var listNode = $(this).siblings('ul');
+                var subtrees = $.merge(listNode.find('li ul'), listNode);
+                var icons = $.merge(listNode.find('.fa'), icon);
+                icons.removeClass(iconFolderOpenClass).removeClass(iconFolderCloseClass);
+                if(expanded) {
+                    subtrees.slideUp({ duration: 100 });
+                    icons.addClass(iconFolderCloseClass);
+                } else {
+                    subtrees.slideDown({ duration: 100 });
+                    icons.addClass(iconFolderOpenClass);
+                }
+            })
+            // 展開關閉所有目錄按鈕
+            $(document).on('click', '#allExpand', function (event) {
+                event.preventDefault();
+                
+                var icon = $(this).children('.fa');
+                var expanded = icon.hasClass(iconAllExpandClass);
+                icon.removeClass(iconAllExpandClass).removeClass(iconAllPackClass);
+                if(expanded) {
+                    $('#sidebar .fa.fa-folder').removeClass('fa-folder').addClass('fa-folder-open')
+                    $('#categories li ul').slideDown({ duration: 100 });
+                    icon.addClass(iconAllPackClass);
+                } else {
+                    $('#sidebar .fa.fa-folder-open').removeClass('fa-folder-open').addClass('fa-folder')
+                    $('#categories li ul').slideUp({ duration: 100 });
+                    icon.addClass(iconAllExpandClass);
+                }
+            });  
+        });
+    </script>
+
     
         
     <div class="widget-wrap">
-        <h3 class="widget-title"><span>歸檔</span></h3>
+        <h3 class="widget-title"><span>時間軸</span></h3>
         <div class="widget">
-            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/">八月 2018</a><span class="archive-list-count">2</span></li></ul>
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/">八月 2018</a><span class="archive-list-count">3</span></li></ul>
         </div>
     </div>
 
     
         
+    <div class="widget-wrap">
+        <h3 class="widget-title"><span>標籤</span></h3>
+        <div class="widget">
+            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Algorithm/">Algorithm</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/EM/">EM</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/這是標籤/">這是標籤</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/這是標籤2/">這是標籤2</a><span class="tag-list-count">1</span></li></ul>
+        </div>
+    </div>
+
     
         
+    <div class="widget-wrap">
+        <h3 class="widget-title"><span>標籤雲</span></h3>
+        <div class="widget tagcloud">
+            <a href="/tags/Algorithm/" style="font-size: 10px;">Algorithm</a> <a href="/tags/EM/" style="font-size: 10px;">EM</a> <a href="/tags/這是標籤/" style="font-size: 10px;">這是標籤</a> <a href="/tags/這是標籤2/" style="font-size: 10px;">這是標籤2</a>
+        </div>
+    </div>
+
     
     <div id="toTop" class="fa fa-angle-up"></div>
 </aside>
             
             <section id="main">
+        <article id="post-EM演算法" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+            <header class="article-header">
+                
+                    <div class="article-meta">
+                        
+    <div class="article-category">
+    	<i class="fa fa-folder"></i>
+        <a class="article-category-link" href="/categories/機器學習/">機器學習</a>
+    </div>
+
+                        
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/Algorithm/">Algorithm</a>, <a class="tag-link" href="/tags/EM/">EM</a>
+    </div>
+
+                        
+    <div class="article-date">
+        <i class="fa fa-calendar"></i>
+        <a href="/EM演算法/">
+            <time datetime="2018-08-28T09:31:35.000Z" itemprop="datePublished">2018-08-28</time>
+        </a>
+    </div>
+
+
+                        
+                            <i class="fa fa-bar-chart"></i>
+                            <span id="busuanzi_container_site_pv"><span id="busuanzi_value_page_pv"></span></span>    
+                        
+                        
+                    </div>
+                
+                
+    
+        <h1 itemprop="name">
+            <a class="article-title" href="/EM演算法/">EM演算法</a>
+        </h1>
+    
+
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+        
+            
+                
+                
+                    
+                    
+                
+                    
+                    
+                
+                    
+                    
+                
+                    
+                    
+                
+                    
+                    
+                
+                
+                    
+                    <p><h1>EM 演算法</h1>
+<p><a href="https://www.jianshu.com/p/1121509ac1dc" target="_blank" rel="noopener">參考網址</a>
+<a href="http://web.mit.edu/6.435/www/Dempster77.pdf" target="_blank" rel="noopener">Maximum Likelihood from Incomplete Data via the EM Algorithm</a>
+[TOC]</p>
+<hr>
+<p>
+                
+            
+        
+        
+            </div>   
+            <div class="article-more-link">
+                <a href="/EM演算法/#more">繼續閱讀</a>
+            </div>
+        
+        <footer class="article-footer">
+        </footer>
+    </div>
+</article>
+
+
+
+
+
+
+    
         <article id="post-我的測試文章" class="article article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
@@ -236,7 +450,17 @@
                 
                     <div class="article-meta">
                         
+    <div class="article-category">
+    	<i class="fa fa-folder"></i>
+        <a class="article-category-link" href="/categories/這是分類/">這是分類</a><i class="fa fa-angle-right"></i><a class="article-category-link" href="/categories/這是分類/這是子分類/">這是子分類</a>
+    </div>
+
                         
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/這是標籤/">這是標籤</a>, <a class="tag-link" href="/tags/這是標籤2/">這是標籤2</a>
+    </div>
+
                         
     <div class="article-date">
         <i class="fa fa-calendar"></i>
@@ -250,16 +474,6 @@
                             <i class="fa fa-bar-chart"></i>
                             <span id="busuanzi_container_site_pv"><span id="busuanzi_value_page_pv"></span></span>    
                         
-                        
-                            <div class="article-meta-button">
-                                <a href='https://github.com/caocharles/caocharles/raw/0827/source/_posts/我的測試文章.md'> Source </a>
-                            </div>
-                            <div class="article-meta-button">
-                                <a href='https://github.com/caocharles/caocharles/edit/0827/source/_posts/我的測試文章.md'> Edit </a>
-                            </div>
-                            <div class="article-meta-button">
-                                <a href='https://github.com/caocharles/caocharles/commits/0827/source/_posts/我的測試文章.md'> History </a>
-                            </div>
                         
                     </div>
                 
@@ -282,10 +496,33 @@
                     
                     
                 
+                    
+                    
+                
+                    
+                    
+                
+                    
+                    
+                
+                    
+                    
+                
+                
+                    
+                    <p><p><a href="https://caocharles.github.io/">連結測試</a></p>
+<p>打打看文字。</p>
+<p>12345</p>
+<p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">x+2y =5</span><br></pre></td></tr></table></figure></p>
+<p>$$\sigma$$</p>
+<p>
+                
             
         
         
-            
+            </div>   
+            <div class="article-more-link">
+                <a href="/我的測試文章/#more">繼續閱讀</a>
             </div>
         
         <footer class="article-footer">
@@ -321,16 +558,6 @@
                             <i class="fa fa-bar-chart"></i>
                             <span id="busuanzi_container_site_pv"><span id="busuanzi_value_page_pv"></span></span>    
                         
-                        
-                            <div class="article-meta-button">
-                                <a href='https://github.com/caocharles/caocharles/raw/0827/source/_posts/hello-world.md'> Source </a>
-                            </div>
-                            <div class="article-meta-button">
-                                <a href='https://github.com/caocharles/caocharles/edit/0827/source/_posts/hello-world.md'> Edit </a>
-                            </div>
-                            <div class="article-meta-button">
-                                <a href='https://github.com/caocharles/caocharles/commits/0827/source/_posts/hello-world.md'> History </a>
-                            </div>
                         
                     </div>
                 
