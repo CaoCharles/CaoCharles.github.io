@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://caocharles.github.io/"/>
-  <updated>2018-08-28T13:51:04.711Z</updated>
+  <updated>2018-08-28T16:13:26.683Z</updated>
   <id>https://caocharles.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>深度學習</title>
+    <link href="https://caocharles.github.io/%E6%B7%B1%E5%BA%A6%E5%AD%B8%E7%BF%92/"/>
+    <id>https://caocharles.github.io/深度學習/</id>
+    <published>2018-08-28T16:12:21.000Z</published>
+    <updated>2018-08-28T16:13:26.683Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="深度學習"><a href="#深度學習" class="headerlink" title="深度學習"></a>深度學習</h1><h1 id="類神經網路-歷史"><a href="#類神經網路-歷史" class="headerlink" title="類神經網路 歷史"></a>類神經網路 歷史</h1><p>人工智慧最早出現於1950年代。人工智慧的目標是希望能讓電腦像人一班思考與學習。被視為人工智慧之父的圖靈(Alan Mathison Turing)，提出了有名的圖靈測試:人類與機器對話，如果人類無法根據這些對話過程判斷對方是人或機器，即通過測試，認為這台電腦具有人工智慧。</p><p>隨著AI的發展日益茁壯，1980年代(Jhon Searle)，提出了對人工智慧的分類方式:</p><ul><li><p>強人工智慧(Strong AI) : 機器與人具有完整的認知能力。</p></li><li><p>弱人工智慧(Weak AI) : 機器設計看起來具有智慧即可。</p></li></ul><p>而深度學習是人工智慧中，現今成長最快的領域，隨著電腦的普及以及其CPU、GPU運算能力增強，我們可以透過世界上各個資料庫收集大量資料，將資料整理成類神經網路的格式，藉由模擬人類神經網路的運作方式，加上數學的演算法進行更新參數，就可以讓電腦學習分辨日常生活的事物，常見的深度學習架構，如多層感知器MLP、深度神經網路DNN、卷積神經網路CNN、遞迴神經網路RNN。</p><p>而這些深度學習的架構應用在視覺辨識、語音辨識、自然語言處理、生物醫學等領域，皆有非常好的效果。</p><p><img src="https://i.imgur.com/5BFVrX2.png" alt=""></p><p>人工智慧現在已廣泛運用在我們的日常生活之中，像是手寫辨識、圖像辨識、語音辨識，幾乎都存在於人手一台的手機之中，還有更進一步的運用，如自動駕駛，透過硬體上的更新，我們可以裝設感測器感應車子周圍的環境狀況，加上圖像辨識，並整合成資訊讓電腦判斷是否停車或繼續行駛，透過演算法讓電腦知道該如何做決定，到最後將會實現在市區行駛之中，隨著科技越來越進步，深度學習所應用的領域就越來越廣。</p><h1 id="類神經網路-簡介"><a href="#類神經網路-簡介" class="headerlink" title="類神經網路 簡介"></a>類神經網路 簡介</h1><p>[維基百科]</p><p>類神經網路簡稱（英語：Artificial Neural Network，ANN），簡稱<strong>神經網路</strong>（Neural Network，NN）或<strong>類神經網路</strong>，在機器學習和認知科學領域，是一種模仿生物神經網路（動物的中樞神經系統，特別是大腦）的結構和功能的數學模型或計算模型，用於對函式進行估計或近似。神經網路由大量的人工神經元聯結進行計算。大多數情況下人工神經網路能在外界資訊的基礎上改變內部結構，是一種自適應系統，通俗的講就是具備學習功能。</p><p>現代神經網路是一種非線性統計性資料建模工具。典型的神經網路具有以下三個部分：</p><ul><li><p><strong>結構</strong>（<strong>Architecture</strong>）<br>結構指定了網路中的變數和它們的拓撲關係。<br>例如:神經網路中的變數可以是神經元連接的權重（weights）和神經元的激勵值（activities of the neurons）。</p></li><li><p><strong>激勵函式（Activity Rule）</strong><br>大部分神經網路模型具有一個短時間尺度的動力學規則，來定義神經元如何根據其他神經元的活動來改變自己的激勵值。一般激勵函式依賴於網路中的權重（即該網路的參數）。</p></li></ul><ul><li><strong>學習規則（Learning Rule）</strong><br>學習規則指定了網路中的權重如何隨著時間推進而調整。</li></ul><p><img src="https://i.imgur.com/Gmo3LfJ.png" alt=""></p><p>上圖為一個簡單的多層感知器，我們利用這個網路</p><h1 id="類神經網路-應用"><a href="#類神經網路-應用" class="headerlink" title="類神經網路 應用"></a>類神經網路 應用</h1>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;深度學習&quot;&gt;&lt;a href=&quot;#深度學習&quot; class=&quot;headerlink&quot; title=&quot;深度學習&quot;&gt;&lt;/a&gt;深度學習&lt;/h1&gt;&lt;h1 id=&quot;類神經網路-歷史&quot;&gt;&lt;a href=&quot;#類神經網路-歷史&quot; class=&quot;headerlink&quot; title=&quot;類
+      
+    
+    </summary>
+    
+      <category term="深度學習" scheme="https://caocharles.github.io/categories/%E6%B7%B1%E5%BA%A6%E5%AD%B8%E7%BF%92/"/>
+    
+    
+      <category term="Deep Learning" scheme="https://caocharles.github.io/tags/Deep-Learning/"/>
+    
+  </entry>
   
   <entry>
     <title>EM演算法</title>
@@ -50,7 +75,7 @@
     <published>2018-08-27T08:23:30.000Z</published>
     <updated>2018-08-28T09:40:52.900Z</updated>
     
-    <content type="html"><![CDATA[<p><a href="https://caocharles.github.io/">連結測試</a></p><p>打打看文字。</p><p>12345</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">x+2y =5</span><br></pre></td></tr></table></figure><p><span class="math display">\[\sigma\]</span></p><p><span class="math display">\[\frac{1}{2}\]</span></p>]]></content>
+    <content type="html"><![CDATA[<p><a href="https://caocharles.github.io/">連結測試</a></p><p>打打看文字。</p><p>12345</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">x+2y =5</span><br></pre></td></tr></table></figure><p>$$\sigma$$ </p><p>$$\frac{1}{2}$$ </p>]]></content>
     
     <summary type="html">
     
@@ -59,7 +84,7 @@
         &lt;p&gt;&lt;a href=&quot;https://caocharles.github.io/&quot;&gt;連結測試&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;打打看文字。&lt;/p&gt;
 &lt;p&gt;12345&lt;/p&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gut
       
     
     </summary>
@@ -82,7 +107,7 @@
     <published>2018-08-27T07:58:15.056Z</published>
     <updated>2018-08-27T07:58:15.057Z</updated>
     
-    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><h2 id="quick-start">Quick Start</h2><h3 id="create-a-new-post">Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="run-server">Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="generate-static-files">Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="deploy-to-remote-sites">Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
+    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
     
     <summary type="html">
     
