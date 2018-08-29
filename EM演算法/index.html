@@ -9,19 +9,19 @@
         <meta name="keywords" content="EM,Algorithm" />
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta name="description" content="EM 演算法 參考網址 Maximum Likelihood from Incomplete Data via the EM Algorithm  最大期望演算法（Expectation-maximization algorithm，又稱期望最大化算法） 在資料分析中常用於分群，在給定群數及機率模型下，去尋找觀測值變數間的所隱藏的訊息，可用此演算法來估計機率模型中的參數估計或遺失值填補。  名詞介">
+    <meta name="description" content="EM 演算法參考網址Maximum Likelihood from Incomplete Data via the EM Algorithm  最大期望演算法（Expectation-maximization algorithm，又稱期望最大化算法）在資料分析中常用於分群，在給定群數及機率模型下，去尋找觀測值變數間的所隱藏的訊息，可用此演算法來估計機率模型中的參數估計或遺失值填補。  名詞介紹 樣">
 <meta name="keywords" content="EM,Algorithm">
 <meta property="og:type" content="article">
 <meta property="og:title" content="EM演算法">
 <meta property="og:url" content="https://caocharles.github.io/EM演算法/index.html">
 <meta property="og:site_name" content="Charles&#39;s Blog">
-<meta property="og:description" content="EM 演算法 參考網址 Maximum Likelihood from Incomplete Data via the EM Algorithm  最大期望演算法（Expectation-maximization algorithm，又稱期望最大化算法） 在資料分析中常用於分群，在給定群數及機率模型下，去尋找觀測值變數間的所隱藏的訊息，可用此演算法來估計機率模型中的參數估計或遺失值填補。  名詞介">
+<meta property="og:description" content="EM 演算法參考網址Maximum Likelihood from Incomplete Data via the EM Algorithm  最大期望演算法（Expectation-maximization algorithm，又稱期望最大化算法）在資料分析中常用於分群，在給定群數及機率模型下，去尋找觀測值變數間的所隱藏的訊息，可用此演算法來估計機率模型中的參數估計或遺失值填補。  名詞介紹 樣">
 <meta property="og:locale" content="zh-TW">
 <meta property="og:image" content="https://i.imgur.com/TIuGBly.png">
 <meta property="og:updated_time" content="2018-08-29T03:16:51.933Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="EM演算法">
-<meta name="twitter:description" content="EM 演算法 參考網址 Maximum Likelihood from Incomplete Data via the EM Algorithm  最大期望演算法（Expectation-maximization algorithm，又稱期望最大化算法） 在資料分析中常用於分群，在給定群數及機率模型下，去尋找觀測值變數間的所隱藏的訊息，可用此演算法來估計機率模型中的參數估計或遺失值填補。  名詞介">
+<meta name="twitter:description" content="EM 演算法參考網址Maximum Likelihood from Incomplete Data via the EM Algorithm  最大期望演算法（Expectation-maximization algorithm，又稱期望最大化算法）在資料分析中常用於分群，在給定群數及機率模型下，去尋找觀測值變數間的所隱藏的訊息，可用此演算法來估計機率模型中的參數估計或遺失值填補。  名詞介紹 樣">
 <meta name="twitter:image" content="https://i.imgur.com/TIuGBly.png">
     
 
@@ -430,49 +430,34 @@ ga('send', 'pageview');
             
                 <div id="toc" class="toc-article">
                 <strong class="toc-title">文章目錄</strong>
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#undefined"><span class="toc-number">1.</span> <span class="toc-text">EM 演算法</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-number">1.1.</span> <span class="toc-text">名詞介紹</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-number">1.2.</span> <span class="toc-text">思考</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-number">1.3.</span> <span class="toc-text">E步驟(更新y)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-number">1.4.</span> <span class="toc-text">M步驟(更新參數$\theta$)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-number">1.5.</span> <span class="toc-text">EM推導</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-number">1.6.</span> <span class="toc-text">EM收斂性</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-number">1.7.</span> <span class="toc-text">範例1</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-number">1.8.</span> <span class="toc-text">範例2</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-number">1.9.</span> <span class="toc-text">範例3</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-number">1.10.</span> <span class="toc-text">Python 實作</span></a></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#EM-演算法"><span class="toc-number">1.</span> <span class="toc-text">EM 演算法</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#名詞介紹"><span class="toc-number">1.1.</span> <span class="toc-text">名詞介紹</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#思考"><span class="toc-number">1.2.</span> <span class="toc-text">思考</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#E步驟-更新y"><span class="toc-number">1.3.</span> <span class="toc-text">E步驟(更新y)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#M步驟-更新參數-theta"><span class="toc-number">1.4.</span> <span class="toc-text">M步驟(更新參數$\theta$)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#EM推導"><span class="toc-number">1.5.</span> <span class="toc-text">EM推導</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#EM收斂性"><span class="toc-number">1.6.</span> <span class="toc-text">EM收斂性</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#範例1"><span class="toc-number">1.7.</span> <span class="toc-text">範例1</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#範例2"><span class="toc-number">1.8.</span> <span class="toc-text">範例2</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#範例3"><span class="toc-number">1.9.</span> <span class="toc-text">範例3</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Python-實作"><span class="toc-number">1.10.</span> <span class="toc-text">Python 實作</span></a></li></ol></li></ol>
                 </div>
             
         
         
-            <h1>EM 演算法</h1>
-<p><a href="https://www.jianshu.com/p/1121509ac1dc" target="_blank" rel="noopener">參考網址</a>
-<a href="http://web.mit.edu/6.435/www/Dempster77.pdf" target="_blank" rel="noopener">Maximum Likelihood from Incomplete Data via the EM Algorithm</a></p>
+            <h1 id="EM-演算法"><a href="#EM-演算法" class="headerlink" title="EM 演算法"></a>EM 演算法</h1><p><a href="https://www.jianshu.com/p/1121509ac1dc" target="_blank" rel="noopener">參考網址</a><br><a href="http://web.mit.edu/6.435/www/Dempster77.pdf" target="_blank" rel="noopener">Maximum Likelihood from Incomplete Data via the EM Algorithm</a></p>
 <hr>
-<p><strong>最大期望演算法</strong>（<strong>Expectation-maximization algorithm</strong>，又稱<strong>期望最大化算法</strong>）
-在資料分析中常用於分群，在給定群數及機率模型下，去尋找觀測值變數間的所隱藏的訊息，可用此演算法來估計機率模型中的參數估計或遺失值填補。</p>
+<p><strong>最大期望演算法</strong>（<strong>Expectation-maximization algorithm</strong>，又稱<strong>期望最大化算法</strong>）<br>在資料分析中常用於分群，在給定群數及機率模型下，去尋找觀測值變數間的所隱藏的訊息，可用此演算法來估計機率模型中的參數估計或遺失值填補。</p>
 <hr>
-<h2>名詞介紹</h2>
-<ul>
-<li>
-<p>樣本: $x$</p>
+<h2 id="名詞介紹"><a href="#名詞介紹" class="headerlink" title="名詞介紹"></a>名詞介紹</h2><ul>
+<li><p>樣本: $x$</p>
 </li>
-<li>
-<p>概似函數:  $L(\theta|x)=p(x|\theta)$</p>
+<li><p>概似函數:  $L(\theta|x)=p(x|\theta)$</p>
 </li>
-<li>
-<p>目的: 找到能讓 $L(\theta|x)$ 最大化的參數</p>
+<li><p>目的: 找到能讓 $L(\theta|x)$ 最大化的參數</p>
 </li>
 </ul>
-<p>我的想法就是找到符合我們樣本資料的&quot;最大&quot;概似函數的機率模型參數，
-以往都是假設好機率模型中的參數，並計算其MLE，
-現在透過樣本及樣本所隱藏的隱變數，來推導適合這些樣本的模型參數。</p>
-<h2>思考</h2>
-<ul>
+<p>我的想法就是找到符合我們樣本資料的”最大”概似函數的機率模型參數，<br>以往都是假設好機率模型中的參數，並計算其MLE，<br>現在透過樣本及樣本所隱藏的隱變數，來推導適合這些樣本的模型參數。</p>
+<h2 id="思考"><a href="#思考" class="headerlink" title="思考"></a>思考</h2><ul>
 <li>argument : $y$ (遺失值或是隱變數)</li>
 <li>complete-data likelihood : $L(\theta|x,y)=p(x,y|\theta)$ 加入隱變數後完整的概似函數</li>
 <li>What about $max_\theta L(x,y)$?</li>
 <li>need to recursively update y and $\hat\theta$?</li>
 </ul>
-<h2>E步驟(更新y)</h2>
-<p>根據現在給定的模型參數及樣本觀測值，我們去計算其log完整概似函數的期望值如下:
-$$Q(\theta|\theta^{(t)})\equiv E_y[log\ p(x,y|\theta)|x,\theta^{(t)}]$$</p>
-<h2>M步驟(更新參數$\theta$)</h2>
-<p>最大化E步驟獲得的期望值
-$$\theta^{(t+1)} = arg\ max_\theta \ Q(\theta|\theta^{t})$$</p>
+<h2 id="E步驟-更新y"><a href="#E步驟-更新y" class="headerlink" title="E步驟(更新y)"></a>E步驟(更新y)</h2><p>根據現在給定的模型參數及樣本觀測值，我們去計算其log完整概似函數的期望值如下:<br>$$Q(\theta|\theta^{(t)})\equiv E_y[log p(x,y|\theta)|x,\theta^{(t)}]$$</p>
+<h2 id="M步驟-更新參數-theta"><a href="#M步驟-更新參數-theta" class="headerlink" title="M步驟(更新參數$\theta$)"></a>M步驟(更新參數$\theta$)</h2><p>最大化E步驟獲得的期望值<br>$$\theta^{(t+1)} = arg max_\theta  Q(\theta|\theta^{t})$$</p>
 <p><strong>重複上述過程直到收斂</strong></p>
-<h2>EM推導</h2>
-<ul>
+<h2 id="EM推導"><a href="#EM推導" class="headerlink" title="EM推導"></a>EM推導</h2><ul>
 <li>$X:observed \space data$</li>
 <li>$Y:latent\space variable$</li>
 </ul>
@@ -482,28 +467,24 @@ $$\theta^{(t+1)} = arg\ max_\theta \ Q(\theta|\theta^{t})$$</p>
 <p>$$= ln\sum_yP(X,y|\theta) $$</p>
 <p>$$= ln(\sum_yP(X,y|\theta))\frac{Q(y)}{Q(y)}$$</p>
 <p>$$\ge\sum_yQ(y)ln\frac{P(X,y|\theta)}{Q(y)} $$</p>
-<p>$$\because log \in concave\space by\space Jensen's\space inequality $$</p>
+<p>$$\because log \in concave\space by\space Jensen’s\space inequality $$</p>
 <p>$$(解決ln\sum 不好計算的問題，Q:機率分配) $$</p>
 <p>$$= E_Q(ln\frac{P(X,y|\theta)}{Q(y)})$$</p>
-<p>在$Jensen's : inequality 中，當E(x)中，x=常數時，等號成立。$</p>
+<p>在$Jensen’s \: inequality 中，當E(x)中，x=常數時，等號成立。$</p>
 <p>$$\Rightarrow\frac{P(X,y|\theta)}{Q(y)}=c \in Constant，且\sum_yQ(y)=1$$</p>
 <p>$$\Rightarrow\sum_yP(X,y|\theta)=c\sum_yQ(y)=c$$</p>
 <p>$$\Rightarrow Q(y)=\frac{P(X,y|\theta)}{\sum_yP(X,y|\theta)}=P(y|x_i,\theta)$$，</p>
 <p>$$Q:在樣本給定下之隱藏變數條件分布$$</p>
 <p>$$\therefore E_Q(ln\frac{P(X,y|\theta)}{Q(y)})=E_y(ln\frac{P(X,y|\theta)}{P(y|x_i,\theta)}|X,\theta)$$</p>
 <p>$$\theta^{(t+1)}=arg\max\limits_\theta l(\theta)\Longleftrightarrow arg\max\limits_\theta\sum_{y}P(y|x_i,\theta^{(t)})ln\frac{P(X,y|\theta)}{P(y|x_i,\theta^{(t)})}$$</p>
-<p>$$: : \Longleftrightarrow arg\max\limits_\theta\sum_{y}P(y|x_i,\theta^{(t)})lnP(X,y|\theta)=E_y(lnP(X,y|\theta)|X,\theta^{(t)})=Q(\theta|\theta^{(t)})$$</p>
-<p>$$\therefore E-step :Find : Q(\theta|\theta^{(t)})$$</p>
+<p>$$\: \: \Longleftrightarrow arg\max\limits_\theta\sum_{y}P(y|x_i,\theta^{(t)})lnP(X,y|\theta)=E_y(lnP(X,y|\theta)|X,\theta^{(t)})=Q(\theta|\theta^{(t)})$$</p>
+<p>$$\therefore E-step :Find \: Q(\theta|\theta^{(t)})$$</p>
 <p>$\Longleftrightarrow$ Find the expectation of the complete-data loglikelihood with respect to the missing data y given the observed data x and the current parameter estimates $\theta^{(t)}$.</p>
 <p>$$M-step=\theta^{(t+1)}=arg\max\limits_\theta Q(\theta|\theta^{(t)})$$</p>
-<h2>EM收斂性</h2>
-<hr>
-<h2>範例1</h2>
-<p>197 animals are distributed multinomially into four categories with cell-probabilities$(\frac{1}{2}+ \frac{\theta}{4}, \frac{(1-\theta)}{4}, \frac{(1-\theta)}{4}, \frac{\theta}{4})$, where $\theta \in (0,1)$is unknown</p>
-<p>Observed Data:
-$$x=(x_1,x_2,x_3,x_4)=(125,18,20,34)$$</p>
-<p>Likelihood:
-$$L(\theta；x)=\frac{n!}{x_1!x_2!x_3!x_4!}(\frac{1}{2}+\frac{\theta}{4})^{x_1}(\frac{1}{4}-\frac{\theta}{4})^{x_2}(\frac{1}{4}-\frac{\theta}{4})^{x_3}(\frac{\theta}{4})^{x_4}$$</p>
+<h2 id="EM收斂性"><a href="#EM收斂性" class="headerlink" title="EM收斂性"></a>EM收斂性</h2><hr>
+<h2 id="範例1"><a href="#範例1" class="headerlink" title="範例1"></a>範例1</h2><p>197 animals are distributed multinomially into four categories with cell-probabilities$(\frac{1}{2}+ \frac{\theta}{4}, \frac{(1-\theta)}{4}, \frac{(1-\theta)}{4}, \frac{\theta}{4})$, where $\theta \in (0,1)$is unknown</p>
+<p>Observed Data:<br>$$x=(x_1,x_2,x_3,x_4)=(125,18,20,34)$$</p>
+<p>Likelihood:<br>$$L(\theta；x)=\frac{n!}{x_1!x_2!x_3!x_4!}(\frac{1}{2}+\frac{\theta}{4})^{x_1}(\frac{1}{4}-\frac{\theta}{4})^{x_2}(\frac{1}{4}-\frac{\theta}{4})^{x_3}(\frac{\theta}{4})^{x_4}$$</p>
 <p>Find MLE by maximizing loglikelihood</p>
 <p>Now use EM to find MLE</p>
 <p>假設我們的隱藏變數在a裡面，令$y=x_{11}+x_{12}$</p>
@@ -514,77 +495,61 @@ $$L(\theta；x)=\frac{n!}{x_1!x_2!x_3!x_4!}(\frac{1}{2}+\frac{\theta}{4})^{x_1}(
 <ul>
 <li>E 步驟</li>
 </ul>
-<p>給定機率模型參數$\theta^{(t)}$和$(x_1,x_2,x_3,x_4)$，$E'=\frac{2x_{1}}{2+\theta}$ and$F'=\frac{\theta x_{1}}{2+\theta}$</p>
+<p>給定機率模型參數$\theta^{(t)}$和$(x_1,x_2,x_3,x_4)$，$E’=\frac{2x_{1}}{2+\theta}$ and$F’=\frac{\theta x_{1}}{2+\theta}$</p>
 <ul>
-<li>M 步驟
-給定(E,F,b,c,d)
-$\hat \theta=\frac{F+d}{F+b+c+d}$</li>
+<li>M 步驟<br>給定(E,F,b,c,d)<br>$\hat \theta=\frac{F+d}{F+b+c+d}$</li>
 </ul>
 <p><strong>重複以上步驟到參數迭代至穩定</strong></p>
-<h2>範例2</h2>
-<h2>範例3</h2>
-<p>假設現在有兩枚硬幣A、B</p>
+<h2 id="範例2"><a href="#範例2" class="headerlink" title="範例2"></a>範例2</h2><h2 id="範例3"><a href="#範例3" class="headerlink" title="範例3"></a>範例3</h2><p>假設現在有兩枚硬幣A、B</p>
 <ul>
-<li>
-<p>&lt;step1&gt;我們用一枚公正的硬幣來決定，投擲 A 或 B 硬幣</p>
+<li><p><step1>我們用一枚公正的硬幣來決定，投擲 A 或 B 硬幣</step1></p>
 </li>
-<li>
-<p>&lt;step2&gt;依據&lt;step1&gt;結果，投擲 A 或 B 硬幣 1次，記錄其結果</p>
+<li><p><step2>依據<step1>結果，投擲 A 或 B 硬幣 1次，記錄其結果</step1></step2></p>
 </li>
-<li>
-<p>&lt;step3&gt;反覆進行n次，最終可得到類似如下結果: 10111011....</p>
+<li><p><step3>反覆進行n次，最終可得到類似如下結果: 10111011….</step3></p>
 <ul>
 <li>1表示正面，0表示反面</li>
 </ul>
 </li>
 </ul>
-<p>如果我們今天只能觀察到最終結果&lt;step3&gt;，無法知道每一次投擲來自哪一枚硬幣，該如何估計出兩個硬幣出現正面機率?</p>
-<p>&lt;Sol&gt;:
-Observed Data : $X=(x_1,x_2,...,x_n), x_i:正面出現次數$
-A、B 出現正面機率 : $\theta =(p,q)$</p>
+<p>如果我們今天只能觀察到最終結果<step3>，無法知道每一次投擲來自哪一枚硬幣，該如何估計出兩個硬幣出現正面機率?</step3></p>
+<p><sol>:<br>Observed Data : $X=(x_1,x_2,…,x_n), x_i:正面出現次數$<br>A、B 出現正面機率 : $\theta =(p,q)$</sol></p>
 <p>$1^{\circ}$  從MLE想法出發</p>
-<p>概似函數 :
-$$L(\theta|X)=P(X|\theta)=\prod_{i=1}^nP(x_i|\theta)$$</p>
+<p>概似函數 :<br>$$L(\theta|X)=P(X|\theta)=\prod_{i=1}^nP(x_i|\theta)$$</p>
 <p>$$\hat p=\frac{使用A硬幣骰到正面次數}{使用A硬幣總投擲次數}$$</p>
 <p>$$\hat q=\frac{使用B硬幣骰到正面次數}{使用B硬幣總投擲次數}$$</p>
 <p>但因為我們並不知道 $x_i$來自哪個硬幣(機率模型)，所以無法進行計算。</p>
 <p>$2^{\circ}$ 嘗試添加隱藏變數，使其變成complete data，運用EM演算法</p>
 <ul>
-<li>
-<p>根據observed data，我們無從得知 $x_i$來自哪個硬幣(機率模型)，</p>
+<li><p>根據observed data，我們無從得知 $x_i$來自哪個硬幣(機率模型)，    </p>
 </li>
-<li>
-<p>因此我們添加一個隱藏變數 $y_i$，其表示 $x_i$ 來自哪個硬幣，$Y=(y_1,y_2,...,y_n)$</p>
+<li><p>因此我們添加一個隱藏變數 $y_i$，其表示 $x_i$ 來自哪個硬幣，$Y=(y_1,y_2,…,y_n)$</p>
 </li>
 </ul>
 <p>$y_i$ ~ Ber(0.5)，$x_i$|$y_i$=1 ~ Ber( p )，$x_i$|$y_i$=0 ~ Ber( q )</p>
-<p>E-step :
-$$\Rightarrow$ $Q(\theta|\theta^{(t)})=E_y[ln(p(x,y|\theta))|x,\theta ^{(t)}]=E_y[\sum_{i=1}^{n}ln(p(y_i|\theta)p(x_i|y_i,\theta))|x,\theta^{(t)}]$$</p>
+<p>E-step :<br>$$\Rightarrow$ $Q(\theta|\theta^{(t)})=E_y[ln(p(x,y|\theta))|x,\theta ^{(t)}]=E_y[\sum_{i=1}^{n}ln(p(y_i|\theta)p(x_i|y_i,\theta))|x,\theta^{(t)}]$$</p>
 <p>$$=\sum_{i=1}^{n}E_y[ln(p(y_i|\theta)p(x_i|y_i,\theta))|x,\theta^{(t)}]=\sum_{i=1}^{n}\sum_{y_i=0}^{1}[ln(p(y_i|\theta)p(x_i|y_i,\theta))p(y_i|x_i,\theta^{(t)} )]$$</p>
 <p>$$=\sum_{i=1}^{n}\sum_{j=0}^{1}[ln(p(y_i=j|\theta)p(x_i|y_i,\theta))p(y_i=j|x_i,\theta^{(t)} )]$$</p>
 <p>其中$p(y_i=j|x_i,\theta^{(t)} )$ : 在第t次迭代下，當前數據來自哪個硬幣的機率</p>
-<p>Q-step :
-&lt;1&gt;$\frac{\partial Q}{\partial p}=\frac{\partial (\sum_{i=1}^{n}ln(\frac{1}{2}p^{x_i}(1-p)^{1-x_i})p(y_i=1|x_i,\theta^{(t)} )}{\partial p}=\frac{\partial (\sum_{i=1}^{n}ln(\frac{1}{2})+x_iln(p)+(1-x_i)ln(1-p)p(y_i=1|x_i,\theta^{(t)} )}{\partial p}$</p>
+<p>Q-step : </p>
+<p><1>$\frac{\partial Q}{\partial p}=\frac{\partial (\sum_{i=1}^{n}ln(\frac{1}{2}p^{x_i}(1-p)^{1-x_i})p(y_i=1|x_i,\theta^{(t)} )}{\partial p}=\frac{\partial (\sum_{i=1}^{n}ln(\frac{1}{2})+x_iln(p)+(1-x_i)ln(1-p)p(y_i=1|x_i,\theta^{(t)} )}{\partial p}$</1></p>
 <p>$$=\sum_{i=1}^{n}(\frac{xi}{p}-\frac{(1-x_i)}{1-  p})p(y_i=1|x_i,\theta^{(t)} )=0$$</p>
 <p>$$\Rightarrow$ $p^{(t+1)}=\frac{\sum_{i=1}^{n}x_ip(y_i=1|x_i,\theta^{(t)})}{\sum_{i=1}^{n}p(y_i=1|x_i,\theta^{(t)})}$$</p>
-<p>&lt;2&gt;$\frac{\partial Q}{\partial q}=0$</p>
+<p><2>$\frac{\partial Q}{\partial q}=0$</2></p>
 <p>同理可得,$q^{(t+1)}=\frac{\sum_{i=1}^{n}x_ip(y_i=2|x_i,\theta^{(t)})}{\sum_{i=1}^{n}p(y_i=2|x_i,\theta^{(t)})}$</p>
 <p>$3^{\circ}$ 綜觀以上結果，可以發現實際上我們只需要計算出$p(y_i=j|x_i,\theta^{(t)} )$，就可以拿來進行EM迭代。</p>
 <p>$\Rightarrow$ 給定初始值$(p^{(0)},q^{(0)})$，計算出$p(y_i=j|x_i,\theta^{(0)} )$，代入更新參數$p^{(t+1)},q^{(t+1)}$，重複迭代，直到收斂或者達到自行給定tolerance內.</p>
-<p>$4^{\circ}$ 若&lt;step2&gt;改成依據&lt;step1&gt;結果，連續投擲 A 或 B 硬幣 10次，記錄其結果</p>
+<p>$4^{\circ}$ 若<step2>改成依據<step1>結果，連續投擲 A 或 B 硬幣 10次，記錄其結果</step1></step2></p>
 <ul>
-<li>&lt;step3&gt;反覆進行n次，最終可得到類似如下結果:
-<ul>
+<li><step3>反覆進行n次，最終可得到類似如下結果:<ul>
 <li>1表示正面，0表示反面</li>
 </ul>
-</li>
+</step3></li>
 </ul>
 <p><img src="https://i.imgur.com/TIuGBly.png" alt=""></p>
-<p>最終Q-step 的參數公式 :
-$$p^{(t+1)}=\frac{\sum_{i=1}^{n}x_ip(y_i=1|x_i,\theta^{(t)})}{\sum_{i=1}^{n}10p(y_i=1|x_i,\theta^{(t)}}$$</p>
+<p>最終Q-step 的參數公式 :<br>$$p^{(t+1)}=\frac{\sum_{i=1}^{n}x_ip(y_i=1|x_i,\theta^{(t)})}{\sum_{i=1}^{n}10p(y_i=1|x_i,\theta^{(t)}}$$</p>
 <p>$$q^{(t+1)}=\frac{\sum_{i=1}^{n}x_ip(y_i=2|x_i,\theta^{(t)})}{\sum_{i=1}^{n}10p(y_i=2|x_i,\theta^{(t)})}$$</p>
-<h2>Python 實作</h2>
-<p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="keyword">from</span> scipy <span class="keyword">import</span> stats</span><br><span class="line"></span><br><span class="line"><span class="comment"># 5組硬幣投擲結果(n=5,k=10)，1代表正面，0代表反面</span></span><br><span class="line">observations = np.array([[<span class="number">1</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">0</span>, <span class="number">1</span>, <span class="number">0</span>, <span class="number">1</span>],</span><br><span class="line">                         [<span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">0</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>],</span><br><span class="line">                         [<span class="number">1</span>, <span class="number">0</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">0</span>, <span class="number">1</span>, <span class="number">1</span>],</span><br><span class="line">                         [<span class="number">1</span>, <span class="number">0</span>, <span class="number">1</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">0</span>, <span class="number">0</span>],</span><br><span class="line">                         [<span class="number">0</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">0</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">0</span>, <span class="number">1</span>]])</span><br><span class="line">da=pd.DataFrame(observations,</span><br><span class="line">                index=[<span class="string">"第一次"</span>,<span class="string">"第二次"</span>,<span class="string">"第三次"</span>,<span class="string">"第四次"</span>,<span class="string">"第五次"</span>])</span><br><span class="line">da.columns = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>,<span class="number">8</span>,<span class="number">9</span>,<span class="number">10</span>];da</span><br><span class="line"></span><br><span class="line"><span class="comment">###</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">em_single</span><span class="params">(priors,observations)</span>:</span></span><br><span class="line"></span><br><span class="line">    <span class="string">"""</span></span><br><span class="line"><span class="string">    EM算法-單次疊代</span></span><br><span class="line"><span class="string">    ------------</span></span><br><span class="line"><span class="string">    priors:[theta_A,theta_B]</span></span><br><span class="line"><span class="string">    observation:[m X n matrix]</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">    Returns</span></span><br><span class="line"><span class="string">    ---------------</span></span><br><span class="line"><span class="string">    new_priors:[new_theta_A,new_theta_B]</span></span><br><span class="line"><span class="string">    :param priors:</span></span><br><span class="line"><span class="string">    :param observations:</span></span><br><span class="line"><span class="string">    :return:</span></span><br><span class="line"><span class="string">    """</span></span><br><span class="line">    counts = &#123;<span class="string">'A'</span>: &#123;<span class="string">'H'</span>: <span class="number">0</span>, <span class="string">'T'</span>: <span class="number">0</span>&#125;, <span class="string">'B'</span>: &#123;<span class="string">'H'</span>: <span class="number">0</span>, <span class="string">'T'</span>: <span class="number">0</span>&#125;&#125;</span><br><span class="line">    theta_A = priors[<span class="number">0</span>]</span><br><span class="line">    theta_B = priors[<span class="number">1</span>]</span><br><span class="line">    <span class="comment">#E step</span></span><br><span class="line">    <span class="keyword">for</span> observation <span class="keyword">in</span> observations:</span><br><span class="line">        len_observation = len(observation)      <span class="comment">#計算投擲次數</span></span><br><span class="line">        num_heads = observation.sum()           <span class="comment">#正面次數</span></span><br><span class="line">        num_tails = len_observation-num_heads   <span class="comment">#反面次數</span></span><br><span class="line">        </span><br><span class="line">        <span class="comment">#二項分配公式求解</span></span><br><span class="line">        contribution_A = scipy.stats.binom.pmf(num_heads,len_observation,theta_A)    <span class="comment">#Bin(x,n,p)</span></span><br><span class="line">        contribution_B = scipy.stats.binom.pmf(num_heads,len_observation,theta_B)</span><br><span class="line">        </span><br><span class="line">        <span class="comment">#計算在給定資料、當前參數下，資料來自哪個硬幣的機率</span></span><br><span class="line">        weight_A = contribution_A / (contribution_A + contribution_B)     <span class="comment"># p(y=1|x,theta)</span></span><br><span class="line">        weight_B = contribution_B / (contribution_A + contribution_B)     <span class="comment"># p(y=0|x,theta)</span></span><br><span class="line">        </span><br><span class="line">        <span class="comment">#更新在當前參數下A，B硬幣產生的正反面次數</span></span><br><span class="line">        counts[<span class="string">'A'</span>][<span class="string">'H'</span>] += weight_A * num_heads  <span class="comment"># num += 1  =&gt; num = num+1， sum p(y_i=1|x,theta)*x_i</span></span><br><span class="line">        counts[<span class="string">'A'</span>][<span class="string">'T'</span>] += weight_A * num_tails</span><br><span class="line">        counts[<span class="string">'B'</span>][<span class="string">'H'</span>] += weight_B * num_heads</span><br><span class="line">        counts[<span class="string">'B'</span>][<span class="string">'T'</span>] += weight_B * num_tails</span><br><span class="line"></span><br><span class="line">    <span class="comment"># M step</span></span><br><span class="line">    new_theta_A = counts[<span class="string">'A'</span>][<span class="string">'H'</span>] / (counts[<span class="string">'A'</span>][<span class="string">'H'</span>] + counts[<span class="string">'A'</span>][<span class="string">'T'</span>])  <span class="comment">#sum p(y_i=1|x,theta)*x_i / sum 10*p(y_i=1|x,theta)</span></span><br><span class="line">    new_theta_B = counts[<span class="string">'B'</span>][<span class="string">'H'</span>] / (counts[<span class="string">'B'</span>][<span class="string">'H'</span>] + counts[<span class="string">'B'</span>][<span class="string">'T'</span>])  <span class="comment">#sum p(y_i=0|x,theta)*x_i / sum 10*p(y_i=1|x,theta)</span></span><br><span class="line">    <span class="keyword">return</span> [new_theta_A,new_theta_B]</span><br><span class="line">    </span><br><span class="line"><span class="comment">###</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">em</span><span class="params">(observations,prior,tol = <span class="number">1e-6</span>,iterations=<span class="number">10000</span>)</span>:</span></span><br><span class="line">    <span class="string">"""</span></span><br><span class="line"><span class="string">    EM算法</span></span><br><span class="line"><span class="string">    ：param observations :觀測數據</span></span><br><span class="line"><span class="string">    ：param prior：模型初始值</span></span><br><span class="line"><span class="string">    ：param tol：迭代结束阈值</span></span><br><span class="line"><span class="string">    ：param iterations：最大迭代次數</span></span><br><span class="line"><span class="string">    ：return：局部最佳的模型參數</span></span><br><span class="line"><span class="string">    """</span></span><br><span class="line">    iteration = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span> iteration &lt; iterations:</span><br><span class="line">        new_prior = em_single(prior,observations)</span><br><span class="line">        delta_change = np.abs(prior[<span class="number">0</span>]-new_prior[<span class="number">0</span>])</span><br><span class="line">        <span class="keyword">if</span> delta_change &lt; tol:</span><br><span class="line">            <span class="keyword">break</span></span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            prior = new_prior</span><br><span class="line">            iteration +=<span class="number">1</span></span><br><span class="line">    <span class="keyword">return</span> new_prior,iteration</span><br><span class="line"><span class="keyword">print</span> (<span class="string">"(p,q,iteration)="</span>,em(observations,[<span class="number">0.7</span>,<span class="number">0.5</span>]))</span><br></pre></td></tr></table></figure></p>
+<h2 id="Python-實作"><a href="#Python-實作" class="headerlink" title="Python 實作"></a>Python 實作</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="keyword">from</span> scipy <span class="keyword">import</span> stats</span><br><span class="line"></span><br><span class="line"><span class="comment"># 5組硬幣投擲結果(n=5,k=10)，1代表正面，0代表反面</span></span><br><span class="line">observations = np.array([[<span class="number">1</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">0</span>, <span class="number">1</span>, <span class="number">0</span>, <span class="number">1</span>],</span><br><span class="line">                         [<span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">0</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>],</span><br><span class="line">                         [<span class="number">1</span>, <span class="number">0</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">0</span>, <span class="number">1</span>, <span class="number">1</span>],</span><br><span class="line">                         [<span class="number">1</span>, <span class="number">0</span>, <span class="number">1</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">0</span>, <span class="number">0</span>],</span><br><span class="line">                         [<span class="number">0</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">0</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">0</span>, <span class="number">1</span>]])</span><br><span class="line">da=pd.DataFrame(observations,</span><br><span class="line">                index=[<span class="string">"第一次"</span>,<span class="string">"第二次"</span>,<span class="string">"第三次"</span>,<span class="string">"第四次"</span>,<span class="string">"第五次"</span>])</span><br><span class="line">da.columns = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>,<span class="number">8</span>,<span class="number">9</span>,<span class="number">10</span>];da</span><br><span class="line"></span><br><span class="line"><span class="comment">###</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">em_single</span><span class="params">(priors,observations)</span>:</span></span><br><span class="line"></span><br><span class="line">    <span class="string">"""</span></span><br><span class="line"><span class="string">    EM算法-單次疊代</span></span><br><span class="line"><span class="string">    ------------</span></span><br><span class="line"><span class="string">    priors:[theta_A,theta_B]</span></span><br><span class="line"><span class="string">    observation:[m X n matrix]</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">    Returns</span></span><br><span class="line"><span class="string">    ---------------</span></span><br><span class="line"><span class="string">    new_priors:[new_theta_A,new_theta_B]</span></span><br><span class="line"><span class="string">    :param priors:</span></span><br><span class="line"><span class="string">    :param observations:</span></span><br><span class="line"><span class="string">    :return:</span></span><br><span class="line"><span class="string">    """</span></span><br><span class="line">    counts = &#123;<span class="string">'A'</span>: &#123;<span class="string">'H'</span>: <span class="number">0</span>, <span class="string">'T'</span>: <span class="number">0</span>&#125;, <span class="string">'B'</span>: &#123;<span class="string">'H'</span>: <span class="number">0</span>, <span class="string">'T'</span>: <span class="number">0</span>&#125;&#125;</span><br><span class="line">    theta_A = priors[<span class="number">0</span>]</span><br><span class="line">    theta_B = priors[<span class="number">1</span>]</span><br><span class="line">    <span class="comment">#E step</span></span><br><span class="line">    <span class="keyword">for</span> observation <span class="keyword">in</span> observations:</span><br><span class="line">        len_observation = len(observation)      <span class="comment">#計算投擲次數</span></span><br><span class="line">        num_heads = observation.sum()           <span class="comment">#正面次數</span></span><br><span class="line">        num_tails = len_observation-num_heads   <span class="comment">#反面次數</span></span><br><span class="line">        </span><br><span class="line">        <span class="comment">#二項分配公式求解</span></span><br><span class="line">        contribution_A = scipy.stats.binom.pmf(num_heads,len_observation,theta_A)    <span class="comment">#Bin(x,n,p)</span></span><br><span class="line">        contribution_B = scipy.stats.binom.pmf(num_heads,len_observation,theta_B)</span><br><span class="line">        </span><br><span class="line">        <span class="comment">#計算在給定資料、當前參數下，資料來自哪個硬幣的機率</span></span><br><span class="line">        weight_A = contribution_A / (contribution_A + contribution_B)     <span class="comment"># p(y=1|x,theta)</span></span><br><span class="line">        weight_B = contribution_B / (contribution_A + contribution_B)     <span class="comment"># p(y=0|x,theta)</span></span><br><span class="line">        </span><br><span class="line">        <span class="comment">#更新在當前參數下A，B硬幣產生的正反面次數</span></span><br><span class="line">        counts[<span class="string">'A'</span>][<span class="string">'H'</span>] += weight_A * num_heads  <span class="comment"># num += 1  =&gt; num = num+1， sum p(y_i=1|x,theta)*x_i</span></span><br><span class="line">        counts[<span class="string">'A'</span>][<span class="string">'T'</span>] += weight_A * num_tails</span><br><span class="line">        counts[<span class="string">'B'</span>][<span class="string">'H'</span>] += weight_B * num_heads</span><br><span class="line">        counts[<span class="string">'B'</span>][<span class="string">'T'</span>] += weight_B * num_tails</span><br><span class="line"></span><br><span class="line">    <span class="comment"># M step</span></span><br><span class="line">    new_theta_A = counts[<span class="string">'A'</span>][<span class="string">'H'</span>] / (counts[<span class="string">'A'</span>][<span class="string">'H'</span>] + counts[<span class="string">'A'</span>][<span class="string">'T'</span>])  <span class="comment">#sum p(y_i=1|x,theta)*x_i / sum 10*p(y_i=1|x,theta)</span></span><br><span class="line">    new_theta_B = counts[<span class="string">'B'</span>][<span class="string">'H'</span>] / (counts[<span class="string">'B'</span>][<span class="string">'H'</span>] + counts[<span class="string">'B'</span>][<span class="string">'T'</span>])  <span class="comment">#sum p(y_i=0|x,theta)*x_i / sum 10*p(y_i=1|x,theta)</span></span><br><span class="line">    <span class="keyword">return</span> [new_theta_A,new_theta_B]</span><br><span class="line">    </span><br><span class="line"><span class="comment">###</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">em</span><span class="params">(observations,prior,tol = <span class="number">1e-6</span>,iterations=<span class="number">10000</span>)</span>:</span></span><br><span class="line">    <span class="string">"""</span></span><br><span class="line"><span class="string">    EM算法</span></span><br><span class="line"><span class="string">    ：param observations :觀測數據</span></span><br><span class="line"><span class="string">    ：param prior：模型初始值</span></span><br><span class="line"><span class="string">    ：param tol：迭代结束阈值</span></span><br><span class="line"><span class="string">    ：param iterations：最大迭代次數</span></span><br><span class="line"><span class="string">    ：return：局部最佳的模型參數</span></span><br><span class="line"><span class="string">    """</span></span><br><span class="line">    iteration = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span> iteration &lt; iterations:</span><br><span class="line">        new_prior = em_single(prior,observations)</span><br><span class="line">        delta_change = np.abs(prior[<span class="number">0</span>]-new_prior[<span class="number">0</span>])</span><br><span class="line">        <span class="keyword">if</span> delta_change &lt; tol:</span><br><span class="line">            <span class="keyword">break</span></span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            prior = new_prior</span><br><span class="line">            iteration +=<span class="number">1</span></span><br><span class="line">    <span class="keyword">return</span> new_prior,iteration</span><br><span class="line"><span class="keyword">print</span> (<span class="string">"(p,q,iteration)="</span>,em(observations,[<span class="number">0.7</span>,<span class="number">0.5</span>]))</span><br></pre></td></tr></table></figure>
 <p>Ans : (p,q,iteration)= ([0.79678865844706648, 0.51958340803243785], 12)</p>
 
             </div>
