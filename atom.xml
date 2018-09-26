@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://caocharles.github.io/"/>
-  <updated>2018-08-29T18:35:40.113Z</updated>
+  <updated>2018-09-26T02:20:41.584Z</updated>
   <id>https://caocharles.github.io/</id>
   
   <author>
@@ -20,16 +20,16 @@
     <title>統研深度學習讀書會</title>
     <link href="https://caocharles.github.io/%E7%B5%B1%E7%A0%94%E6%B7%B1%E5%BA%A6%E5%AD%B8%E7%BF%92%E8%AE%80%E6%9B%B8%E6%9C%83/"/>
     <id>https://caocharles.github.io/統研深度學習讀書會/</id>
-    <published>2018-08-29T01:43:20.000Z</published>
-    <updated>2018-08-29T18:35:40.113Z</updated>
+    <published>2018-09-20T15:43:20.000Z</published>
+    <updated>2018-09-26T02:20:41.584Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="讀書會簡介"><a href="#讀書會簡介" class="headerlink" title="讀書會簡介"></a>讀書會簡介</h2><h2 id="開學討論"><a href="#開學討論" class="headerlink" title="開學討論"></a>開學討論</h2>]]></content>
+    <content type="html"><![CDATA[<h2 id="讀書會簡介"><a href="#讀書會簡介" class="headerlink" title="讀書會簡介"></a>讀書會簡介</h2><p>大家好，這是我和立諭發起的讀書會，這個讀書會的目的是希望透過討論及分享來學習Machine Learning + Deep Learning，希望大家以後不要失業(來自東森的提醒)</p><h2 id="先備知識"><a href="#先備知識" class="headerlink" title="先備知識"></a>先備知識</h2><ul><li>微積分(微分吧)</li><li>線性代數(向量輸入後的傳導及運算)</li></ul><p>我們這學年的進度大致簡單介紹如下(暫定)</p><h2 id="上學期"><a href="#上學期" class="headerlink" title="上學期"></a>上學期</h2><ul><li>一開始先帶大家入門程式，但還不確定要從 Keras 或是 TensorFlow 入手</li><li>之後大家就每周做個作業，然後也要看個課程</li><li>課程方面應該以李宏毅的 Machine Learing 為主，他的課有以下特點<ul><li>強調無痛入門，而且涉及的領域很廣，圖像及語音辨識、語意分析等等</li><li>上課方式有趣，基本上不會有枯燥的感覺</li><li>更重要的是李老師上課講的都是很新的內容，總之入門真的推薦</li></ul></li><li>實作方面的資源很多，再慢慢介紹</li><li>大家有時間的話可以報名一些比賽，例如黑克松或是 Kaggle </li><li>討論實作上的技巧、觀念及問題</li><li>Scikit-Learn (機器學習 ML 套件)，比較次要，<br>但還是希望大家能大致了解，下學期的多變量會輕鬆許多</li></ul><h2 id="寒假"><a href="#寒假" class="headerlink" title="寒假"></a>寒假</h2><p>寒假大家可能很忙，但希望大家還是能撥點時間看些相關的東西</p><ul><li>林軒田的機器學習基石跟技法<ul><li>蠻理論的不過大家是碩士會理論應該的所以還是硬著頭皮看吧</li><li>講的東西其實都蠻原始的，有些東西其實已經沒人在用了</li><li>但是起源的東西我覺得聽一聽多少會有幫助</li><li>可能會聽到崩潰，應該是我太笨(可能只有AI真正懂)</li><li>聽說其實作業超爆難(by 資科-劉昭麟教授)</li><li>但是大家也不用寫作業，就大家自己看一看就好(吧)</li></ul></li></ul><h2 id="下學期"><a href="#下學期" class="headerlink" title="下學期"></a>下學期</h2><p>碩一下課業會挺重的，但好像也還好，<br>多變量這門課如果上學期有在讀書會學到東西其實應該會蠻輕鬆的</p><ul><li>論文探討，如果是很新的希望我們能把它實作出來看看</li><li>期望大家有找到自已想做的項目，我們很樂意一起討論或是提供幫助，<br>最好的情況是你們可以指導我們嘻嘻</li></ul>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;h2 id=&quot;讀書會簡介&quot;&gt;&lt;a href=&quot;#讀書會簡介&quot; class=&quot;headerlink&quot; title=&quot;讀書會簡介&quot;&gt;&lt;/a&gt;讀書會簡介&lt;/h2&gt;&lt;h2 id=&quot;開學討論&quot;&gt;&lt;a href=&quot;#開學討論&quot; class=&quot;headerlink&quot; title=&quot;開學討論&quot;
+        &lt;h2 id=&quot;讀書會簡介&quot;&gt;&lt;a href=&quot;#讀書會簡介&quot; class=&quot;headerlink&quot; title=&quot;讀書會簡介&quot;&gt;&lt;/a&gt;讀書會簡介&lt;/h2&gt;&lt;p&gt;大家好，這是我和立諭發起的讀書會，這個讀書會的目的是希望透過討論及分享來學習Machine Learning + D
       
     
     </summary>
