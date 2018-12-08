@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://caocharles.github.io/categories/index.html</loc>
+    
+    <lastmod>2018-12-08T18:21:47.720Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://caocharles.github.io/tags/index.html</loc>
+    
+    <lastmod>2018-12-08T18:19:39.574Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://caocharles.github.io/about/index.html</loc>
     
     <lastmod>2018-12-08T18:14:31.307Z</lastmod>
@@ -75,20 +89,6 @@
     <loc>https://caocharles.github.io/%E6%88%91%E7%9A%84%E6%B8%AC%E8%A9%A6%E6%96%87%E7%AB%A0/</loc>
     
     <lastmod>2018-09-04T13:47:53.821Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://caocharles.github.io/categories/index.html</loc>
-    
-    <lastmod>2018-08-28T09:23:35.373Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://caocharles.github.io/tags/index.html</loc>
-    
-    <lastmod>2018-08-28T09:23:14.610Z</lastmod>
     
   </url>
   
