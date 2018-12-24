@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://caocharles.github.io/"/>
-  <updated>2018-12-08T17:57:45.282Z</updated>
+  <updated>2018-12-24T20:30:49.374Z</updated>
   <id>https://caocharles.github.io/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>線性代數 - R語言入門</title>
+    <link href="https://caocharles.github.io/%E7%B7%9A%E6%80%A7%E4%BB%A3%E6%95%B8-R%E8%AA%9E%E8%A8%80%E5%85%A5%E9%96%80/"/>
+    <id>https://caocharles.github.io/線性代數-R語言入門/</id>
+    <published>2018-12-24T20:24:42.000Z</published>
+    <updated>2018-12-24T20:30:49.374Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="線性代數-R語言入門"><a href="#線性代數-R語言入門" class="headerlink" title="線性代數 - R語言入門"></a>線性代數 - R語言入門</h1><ul><li>時間 : 2018/12/25(二) 12:10 - 13:00</li><li>地點 : 學思樓040103教室</li><li>書籍 : <a href="https://www.math.uh.edu/~jmorgan/Math6397/day13/LinearAlgebraR-Handout.pdf" target="_blank" rel="noopener">Linear algebra in R</a></li><li>程式碼 : <a href="https://github.com/CaoCharles/Linear_Algebra_R" target="_blank" rel="noopener">https://github.com/CaoCharles/Linear_Algebra_R</a></li></ul><h2 id="簡介"><a href="#簡介" class="headerlink" title="簡介"></a>簡介</h2><p>介紹向量及矩陣在R語言的使用方法，並能使用R語言對向量及矩陣做基本運算。</p><h2 id="基本安裝"><a href="#基本安裝" class="headerlink" title="基本安裝"></a>基本安裝</h2><p><a href="https://dotblogs.com.tw/michael80321/2014/12/15/147656" target="_blank" rel="noopener">參考網頁</a></p><ul><li>前往(<a href="http://cran.csie.ntu.edu.tw/)安裝" target="_blank" rel="noopener">http://cran.csie.ntu.edu.tw/)安裝</a> R 程式 </li><li>前往(<a href="https://www.rstudio.com/products/rstudio/download/)安裝RStudio" target="_blank" rel="noopener">https://www.rstudio.com/products/rstudio/download/)安裝RStudio</a> </li></ul><h2 id="下載教材"><a href="#下載教材" class="headerlink" title="下載教材"></a>下載教材</h2><p><a href="https://github.com/CaoCharles/Linear_Algebra_R" target="_blank" rel="noopener">教材網頁</a></p><p>1.進入網頁點選綠色按鈕<br><img src="https://i.imgur.com/4IQdN6f.png" alt=""></p><p>2.點選Download ZIP 下載壓縮檔並解壓縮至桌面<br><img src="https://i.imgur.com/fb3V2wH.png" alt=""></p><p>3.開啟RStudio並點選File按下New Project<br><img src="https://i.imgur.com/y5zeKw9.png" alt=""></p><p>4.點選Existing Directory並選擇剛剛的資料夾<br><img src="https://i.imgur.com/BTPxMfL.png" alt=""></p><p>5.按下Create Project將專案匯入<br><img src="https://i.imgur.com/b6sd20X.png" alt=""></p><p>6.專案匯入即可執行程式碼<br><img src="https://i.imgur.com/KM8xaAY.png" alt=""></p><h2 id="專案內容"><a href="#專案內容" class="headerlink" title="專案內容"></a>專案內容</h2><p>RStudio右下角為專案資料夾檔案，可以點選不同檔案執行程式碼</p><ul><li>共有3個程式碼檔案<ul><li>1_Vectors (向量基本運算)</li><li>2_Augmented matrix (增廣矩陣基本運算)</li><li>3_Matrices (矩陣基本運算)</li></ul></li></ul><p>執行程式碼的方式有下列幾種方式</p><ul><li>點選R Script右上角Source執行全部程式碼</li><li>圈選要執行的範圍點選右上角Run執行程式碼</li><li>將滑鼠指標點選要執行的程式按下<ul><li>Ctrl + Enter 執行程式並換行</li><li>Alt + Enter 執行程式不換行</li></ul></li></ul><h3 id="向量基本運算"><a href="#向量基本運算" class="headerlink" title="向量基本運算"></a>向量基本運算</h3><p>在R裡面使用c( )生成的向量都為 n x 1 的行向量，a <em> b 為兩向量相同位置的元素相乘，sum(a </em> b) 為兩向量內積的結果。</p><p><img src="https://i.imgur.com/9fxbuaW.png" alt=""></p><h3 id="增廣矩陣基本運算"><a href="#增廣矩陣基本運算" class="headerlink" title="增廣矩陣基本運算"></a>增廣矩陣基本運算</h3><ul><li><a href="https://ccjou.wordpress.com/2011/04/26/%E7%9F%A9%E9%99%A3%E7%9A%84%E7%AD%89%E5%83%B9%E9%97%9C%E4%BF%82/" target="_blank" rel="noopener">矩陣的等價關係</a></li><li><a href="https://ccjou.wordpress.com/2010/02/02/%E7%89%B9%E6%AE%8A%E7%9F%A9%E9%99%A3-%E5%8D%81%EF%BC%9A%E5%9F%BA%E6%9C%AC%E7%9F%A9%E9%99%A3/" target="_blank" rel="noopener">基本矩陣</a></li></ul><p>$x + 2y + 3z = 6$<br>$2x - 3y +2z = 14$<br>$3x + y - z = -2$</p><p>將增廣矩陣的運算過程用R語言程式來表達，要搞懂R語言矩陣的寫法及運算規則，再將複雜的運算過程用程式碼來執行。</p><p><img src="https://i.imgur.com/mtipy5H.png" alt=""></p><h3 id="矩陣基本運算"><a href="#矩陣基本運算" class="headerlink" title="矩陣基本運算"></a>矩陣基本運算</h3><ul><li><a href="https://ccjou.wordpress.com/2012/06/27/%E4%BC%B4%E9%9A%A8%E7%9F%A9%E9%99%A3/" target="_blank" rel="noopener">伴隨矩陣</a></li><li><a href="https://ccjou.wordpress.com/2013/02/22/%E9%AB%98%E6%96%AF%E2%94%80%E7%B4%84%E7%95%B6%E6%B3%95/" target="_blank" rel="noopener">高斯消去法</a></li></ul><p>介紹矩陣一般常用的基本運算，並使用矩陣的列運算計算出其反矩陣，也可使用R語言專屬的套件計算其餘因子及伴隨矩陣，運用公式來計算其反矩陣。</p><p><img src="https://i.imgur.com/27YCx05.png" alt=""></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;線性代數-R語言入門&quot;&gt;&lt;a href=&quot;#線性代數-R語言入門&quot; class=&quot;headerlink&quot; title=&quot;線性代數 - R語言入門&quot;&gt;&lt;/a&gt;線性代數 - R語言入門&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;時間 : 2018/12/25(二) 12:10 - 1
+      
+    
+    </summary>
+    
+      <category term="線性代數" scheme="https://caocharles.github.io/categories/%E7%B7%9A%E6%80%A7%E4%BB%A3%E6%95%B8/"/>
+    
+    
+      <category term="Linear Algebra" scheme="https://caocharles.github.io/tags/Linear-Algebra/"/>
+    
+  </entry>
   
   <entry>
     <title>職場透視營 II</title>
