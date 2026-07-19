@@ -1,0 +1,890 @@
+<!DOCTYPE html>
+<html lang=zh>
+<head>
+    <meta charset="utf-8">
+    
+    <title>我的測試文章 | Charles&#39;s Blog</title>
+    
+    
+        <meta name="keywords" content="這是標籤,這是標籤2" />
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="連結測試 打打看文字。 12345 1x+2y &#x3D;5  $$\sigma$$ $$\frac{1}{2}$$  TENSORFLOW’S HELLO WORLDIn this notebook we will overview the basics of TensorFlow, learn it’s structures and see what is the motivation to use">
+<meta property="og:type" content="article">
+<meta property="og:title" content="我的測試文章">
+<meta property="og:url" content="https://caocharles.github.io/%E6%88%91%E7%9A%84%E6%B8%AC%E8%A9%A6%E6%96%87%E7%AB%A0/index.html">
+<meta property="og:site_name" content="Charles&#39;s Blog">
+<meta property="og:description" content="連結測試 打打看文字。 12345 1x+2y &#x3D;5  $$\sigma$$ $$\frac{1}{2}$$  TENSORFLOW’S HELLO WORLDIn this notebook we will overview the basics of TensorFlow, learn it’s structures and see what is the motivation to use">
+<meta property="og:locale" content="zh_TW">
+<meta property="og:image" content="https://ibm.box.com/shared/static/jvcqp2iy2jlx2b32rmzdt0tx8lvxgzkp.png">
+<meta property="og:image" content="https://ibm.box.com/shared/static/a94cgezzwbkrq02jzfjjljrcaozu5s2q.png">
+<meta property="og:image" content="https://ibm.box.com/shared/static/ymn0hl3hf8s3xb4k15v22y5vmuodnue1.svg">
+<meta property="og:image" content="https://ibm.box.com/shared/static/kmxz570uai8eeg6i6ynqdz6kmlx1m422.png">
+<meta property="og:image" content="https://ibm.box.com/shared/static/xlpv9h5xws248c09k1rlx7cer69y4grh.png">
+<meta property="article:published_time" content="2018-08-27T00:23:30.000Z">
+<meta property="article:modified_time" content="2026-07-19T13:37:40.476Z">
+<meta property="article:author" content="查爾斯">
+<meta property="article:tag" content="這是標籤">
+<meta property="article:tag" content="這是標籤2">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://ibm.box.com/shared/static/jvcqp2iy2jlx2b32rmzdt0tx8lvxgzkp.png">
+    
+
+    
+        <link rel="alternate" href="/atom.xml" title="Charles&#39;s Blog" type="application/atom+xml" />
+    
+
+    
+        <link rel="icon" href="/css/images/favicon.ico" />
+    
+
+    
+<link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css">
+
+    
+<link rel="stylesheet" href="/libs/open-sans/styles.css">
+
+    
+<link rel="stylesheet" href="/libs/source-code-pro/styles.css">
+
+
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    
+<script src="/libs/jquery/2.1.3/jquery.min.js"></script>
+
+    
+<script src="/libs/jquery/plugins/cookie/1.4.1/jquery.cookie.js"></script>
+
+    
+    
+        
+<link rel="stylesheet" href="/libs/lightgallery/css/lightgallery.min.css">
+
+    
+    
+        
+<link rel="stylesheet" href="/libs/justified-gallery/justifiedGallery.min.css">
+
+    
+    
+    
+    
+
+
+    
+        <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+<body>
+    <div id="container">
+        <header id="header">
+    <div id="header-main" class="header-inner">
+        <div class="outer">
+            <a href="/" id="logo">
+                
+                <span class="site-title">Charles&#39;s Blog</span>
+            </a>
+            <nav id="main-nav">
+                
+                    <a class="main-nav-link" href="/">首頁</a>
+                
+                    <a class="main-nav-link" href="/categories">分類</a>
+                
+                    <a class="main-nav-link" href="/tags">標籤</a>
+                
+                    <a class="main-nav-link" href="/about">關於</a>
+                
+            </nav>
+            
+                
+                <nav id="sub-nav">
+                    <div class="profile" id="profile-nav">
+                        <a id="profile-anchor" href="javascript:;">
+                            <img class="avatar" src="/css/images/avatar.png" />
+                            <i class="fa fa-caret-down"></i>
+                        </a>
+                    </div>
+                </nav>
+            
+            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="搜尋" />
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something..." />
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: '文章',
+            PAGES: 'Pages',
+            CATEGORIES: '分類',
+            TAGS: '標籤',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+
+<script src="/js/insight.js"></script>
+
+
+</div>
+        </div>
+    </div>
+    <div id="main-nav-mobile" class="header-sub header-inner">
+        <table class="menu outer">
+            <tr>
+                
+                    <td><a class="main-nav-link" href="/">首頁</a></td>
+                
+                    <td><a class="main-nav-link" href="/categories">分類</a></td>
+                
+                    <td><a class="main-nav-link" href="/tags">標籤</a></td>
+                
+                    <td><a class="main-nav-link" href="/about">關於</a></td>
+                
+                <td>
+                    
+    <div class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="搜尋" />
+    </div>
+
+                </td>
+            </tr>
+        </table>
+    </div>
+</header>
+
+        <div class="outer">
+            
+                
+
+<aside id="profile">
+    <div class="inner profile-inner">
+        <div class="base-info profile-block">
+            <img id="avatar" src="/css/images/avatar.png" />
+            <h2 id="name">CaoCharles</h2>
+            <h3 id="title">AI Programmer</h3>
+            <span id="location"><i class="fa fa-map-marker"></i>Taipei, Taiwan</span>
+            <a id="follow" target="_blank" href="https://github.com/caocharles/">關注我</a>
+        </div>
+        <div class="article-info profile-block">
+            <div class="article-info-block">
+                12
+                <span>文章</span>
+            </div>
+            <div class="article-info-block">
+                12
+                <span>標籤</span>
+            </div>
+        </div>
+        
+        <div class="profile-block social-links">
+            <table>
+                <tr>
+                    
+                    
+                    <td>
+                        <a href="https://github.com/caocharles/" target="_blank" title="github" class=tooltip>
+                            <i class="fa fa-github"></i>
+                        </a>
+                    </td>
+                    
+                    <td>
+                        <a href="https://www.facebook.com/choun811365/" target="_blank" title="facebook" class=tooltip>
+                            <i class="fa fa-facebook"></i>
+                        </a>
+                    </td>
+                    
+                    <td>
+                        <a href="/atom.xml" target="_blank" title="rss" class=tooltip>
+                            <i class="fa fa-rss"></i>
+                        </a>
+                    </td>
+                    
+                </tr>
+            </table>
+        </div>
+        
+    </div>
+</aside>
+
+            
+            
+                <aside id="sidebar">
+   
+        
+    <div class="widget-wrap" id='categories'>
+        <h3 class="widget-title">
+            <span>分類</span>
+            &nbsp;
+            <a id='allExpand' href="#">
+                <i class="fa fa-angle-double-down fa-2x"></i>
+            </a>
+        </h3>
+        
+        
+        
+         <ul class="unstyled" id="tree" > 
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            國泰人壽
+                        </a>
+                         <ul class="unstyled" id="tree" > 
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            國泰大數據競賽
+                        </a>
+                         <ul class="unstyled" id="tree" >  <li class="file"><a href="/%E5%9C%8B%E6%B3%B0%E5%A4%A7%E6%95%B8%E6%93%9A%E7%AB%B6%E8%B3%BD%E5%BF%83%E5%BE%97/">國泰大數據競賽心得</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            簡報課程在國泰
+                        </a>
+                         <ul class="unstyled" id="tree" >  <li class="file"><a href="/%E5%95%86%E6%A5%AD%E7%B0%A1%E5%A0%B1%E5%8F%B0%E9%A2%A8/">商業簡報台風</a></li>  <li class="file"><a href="/%E5%95%86%E6%A5%AD%E7%B0%A1%E5%A0%B1%E8%A3%BD%E4%BD%9C/">商業簡報製作</a></li>  </ul> 
+                    </li> 
+                     </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            機器學習
+                        </a>
+                         <ul class="unstyled" id="tree" >  <li class="file"><a href="/EM%E6%BC%94%E7%AE%97%E6%B3%95/">EM演算法</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            深度學習
+                        </a>
+                         <ul class="unstyled" id="tree" >  <li class="file"><a href="/%E6%B7%B1%E5%BA%A6%E5%AD%B8%E7%BF%92/">深度學習</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            演講心得
+                        </a>
+                         <ul class="unstyled" id="tree" >  <li class="file"><a href="/%E8%81%B7%E5%A0%B4%E9%80%8F%E8%A6%96%E7%87%9F-%E5%BF%83%E5%BE%97/">職場透視營 II</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            碩二課程
+                        </a>
+                         <ul class="unstyled" id="tree" > 
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            人工智慧與應用
+                        </a>
+                         <ul class="unstyled" id="tree" >  <li class="file"><a href="/%E4%BA%BA%E5%B7%A5%E6%99%BA%E6%85%A7%E7%AC%AC4%E5%91%A8%E7%AD%86%E8%A8%98/">人工智慧第4周筆記</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            進階創新科技技術
+                        </a>
+                         <ul class="unstyled" id="tree" >  <li class="file"><a href="/%E9%80%B2%E9%9A%8E%E5%89%B5%E6%96%B0%E7%A7%91%E6%8A%80%E6%8A%80%E8%A1%93/">進階創新科技技術(第一周)</a></li>  </ul> 
+                    </li> 
+                     </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            線性代數
+                        </a>
+                         <ul class="unstyled" id="tree" >  <li class="file"><a href="/%E7%B7%9A%E6%80%A7%E4%BB%A3%E6%95%B8-R%E8%AA%9E%E8%A8%80%E5%85%A5%E9%96%80/">線性代數 - R語言入門</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            讀書會
+                        </a>
+                         <ul class="unstyled" id="tree" >  <li class="file"><a href="/%E7%B5%B1%E7%A0%94%E6%B7%B1%E5%BA%A6%E5%AD%B8%E7%BF%92%E8%AE%80%E6%9B%B8%E6%9C%83/">統研深度學習讀書會</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory open">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder-open"></i>
+                            &nbsp;
+                            這是分類
+                        </a>
+                         <ul class="unstyled" id="tree" > 
+                    <li class="directory open">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder-open"></i>
+                            &nbsp;
+                            這是子分類
+                        </a>
+                         <ul class="unstyled" id="tree" >  <li class="file active"><a href="/%E6%88%91%E7%9A%84%E6%B8%AC%E8%A9%A6%E6%96%87%E7%AB%A0/">我的測試文章</a></li>  </ul> 
+                    </li> 
+                     </ul> 
+                    </li> 
+                     <li class="file"><a href="/hello-world/">Hello World</a></li>  </ul> 
+    </div>
+    <script>
+        $(document).ready(function() {
+            var iconFolderOpenClass  = 'fa-folder-open';
+            var iconFolderCloseClass = 'fa-folder';
+            var iconAllExpandClass = 'fa-angle-double-down';
+            var iconAllPackClass = 'fa-angle-double-up';
+            // Handle directory-tree expansion:
+            // 左键单独展开目录
+            $(document).on('click', '#categories a[data-role="directory"]', function (event) {
+                event.preventDefault();
+
+                var icon = $(this).children('.fa');
+                var expanded = icon.hasClass(iconFolderOpenClass);
+                var subtree = $(this).siblings('ul');
+                icon.removeClass(iconFolderOpenClass).removeClass(iconFolderCloseClass);
+                if (expanded) {
+                    if (typeof subtree != 'undefined') {
+                        subtree.slideUp({ duration: 100 });
+                    }
+                    icon.addClass(iconFolderCloseClass);
+                } else {
+                    if (typeof subtree != 'undefined') {
+                        subtree.slideDown({ duration: 100 });
+                    }
+                    icon.addClass(iconFolderOpenClass);
+                }
+            });
+            // 右键展开下属所有目录
+            $('#categories a[data-role="directory"]').bind("contextmenu", function(event){
+                event.preventDefault();
+                
+                var icon = $(this).children('.fa');
+                var expanded = icon.hasClass(iconFolderOpenClass);
+                var listNode = $(this).siblings('ul');
+                var subtrees = $.merge(listNode.find('li ul'), listNode);
+                var icons = $.merge(listNode.find('.fa'), icon);
+                icons.removeClass(iconFolderOpenClass).removeClass(iconFolderCloseClass);
+                if(expanded) {
+                    subtrees.slideUp({ duration: 100 });
+                    icons.addClass(iconFolderCloseClass);
+                } else {
+                    subtrees.slideDown({ duration: 100 });
+                    icons.addClass(iconFolderOpenClass);
+                }
+            })
+            // 展开关闭所有目录按钮
+            $(document).on('click', '#allExpand', function (event) {
+                event.preventDefault();
+                
+                var icon = $(this).children('.fa');
+                var expanded = icon.hasClass(iconAllExpandClass);
+                icon.removeClass(iconAllExpandClass).removeClass(iconAllPackClass);
+                if(expanded) {
+                    $('#sidebar .fa.fa-folder').removeClass('fa-folder').addClass('fa-folder-open')
+                    $('#categories li ul').slideDown({ duration: 100 });
+                    icon.addClass(iconAllPackClass);
+                } else {
+                    $('#sidebar .fa.fa-folder-open').removeClass('fa-folder-open').addClass('fa-folder')
+                    $('#categories li ul').slideUp({ duration: 100 });
+                    icon.addClass(iconAllExpandClass);
+                }
+            });  
+        });
+    </script>
+
+    
+        
+    <div class="widget-wrap">
+        <h3 class="widget-title"><span>標籤</span></h3>
+        <div class="widget">
+            <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/AI/" rel="tag">AI</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Algorithm/" rel="tag">Algorithm</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CathyLife/" rel="tag">CathyLife</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Competition/" rel="tag">Competition</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Deep-Learning/" rel="tag">Deep Learning</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/EM/" rel="tag">EM</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linear-Algebra/" rel="tag">Linear Algebra</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/PPT/" rel="tag">PPT</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Pytorch/" rel="tag">Pytorch</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/work-experience/" rel="tag">work experience</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%80%99%E6%98%AF%E6%A8%99%E7%B1%A4/" rel="tag">這是標籤</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%80%99%E6%98%AF%E6%A8%99%E7%B1%A42/" rel="tag">這是標籤2</a><span class="tag-list-count">1</span></li></ul>
+        </div>
+    </div>
+
+    
+        
+    <div class="widget-wrap">
+        <h3 class="widget-title"><span>標籤雲</span></h3>
+        <div class="widget tagcloud">
+            <a href="/tags/AI/" style="font-size: 10px;">AI</a> <a href="/tags/Algorithm/" style="font-size: 10px;">Algorithm</a> <a href="/tags/CathyLife/" style="font-size: 10px;">CathyLife</a> <a href="/tags/Competition/" style="font-size: 10px;">Competition</a> <a href="/tags/Deep-Learning/" style="font-size: 20px;">Deep Learning</a> <a href="/tags/EM/" style="font-size: 10px;">EM</a> <a href="/tags/Linear-Algebra/" style="font-size: 10px;">Linear Algebra</a> <a href="/tags/PPT/" style="font-size: 20px;">PPT</a> <a href="/tags/Pytorch/" style="font-size: 10px;">Pytorch</a> <a href="/tags/work-experience/" style="font-size: 10px;">work experience</a> <a href="/tags/%E9%80%99%E6%98%AF%E6%A8%99%E7%B1%A4/" style="font-size: 10px;">這是標籤</a> <a href="/tags/%E9%80%99%E6%98%AF%E6%A8%99%E7%B1%A42/" style="font-size: 10px;">這是標籤2</a>
+        </div>
+    </div>
+
+    
+    <div id="toTop" class="fa fa-angle-up"></div>
+</aside>
+            
+            <section id="main"><article id="post-我的測試文章" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+            <header class="article-header">
+                
+                    <div class="article-meta">
+                        
+    <div class="article-category">
+    	<i class="fa fa-folder"></i>
+        <a class="article-category-link" href="/categories/%E9%80%99%E6%98%AF%E5%88%86%E9%A1%9E/">這是分類</a><i class="fa fa-angle-right"></i><a class="article-category-link" href="/categories/%E9%80%99%E6%98%AF%E5%88%86%E9%A1%9E/%E9%80%99%E6%98%AF%E5%AD%90%E5%88%86%E9%A1%9E/">這是子分類</a>
+    </div>
+
+                        
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link-link" href="/tags/%E9%80%99%E6%98%AF%E6%A8%99%E7%B1%A4/" rel="tag">這是標籤</a>, <a class="tag-link-link" href="/tags/%E9%80%99%E6%98%AF%E6%A8%99%E7%B1%A42/" rel="tag">這是標籤2</a>
+    </div>
+
+                        
+    <div class="article-date">
+        <i class="fa fa-calendar"></i>
+        <a href="/%E6%88%91%E7%9A%84%E6%B8%AC%E8%A9%A6%E6%96%87%E7%AB%A0/">
+            <time datetime="2018-08-27T00:23:30.000Z" itemprop="datePublished">2018-08-27</time>
+        </a>
+    </div>
+
+
+                        
+                            <i class="fa fa-bar-chart"></i>
+                            <span id="busuanzi_container_site_pv"><span id="busuanzi_value_page_pv"></span></span>    
+                        
+                        
+                    </div>
+                
+                
+    
+        <h1 class="article-title" itemprop="name">
+            我的測試文章
+        </h1>
+    
+
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+        
+            
+        
+        
+            <p><a href="https://caocharles.github.io/">連結測試</a></p>
+<p>打打看文字。</p>
+<p>12345</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">x+2y =5</span><br></pre></td></tr></table></figure>
+
+<p>$$\sigma$$</p>
+<p>$$\frac{1}{2}$$</p>
+<p><a target="_blank" rel="noopener" href="https://www.bigdatauniversity.com/"><img src="https://ibm.box.com/shared/static/jvcqp2iy2jlx2b32rmzdt0tx8lvxgzkp.png"></a></p>
+<h1 id="TENSORFLOW’S-HELLO-WORLD"><a href="#TENSORFLOW’S-HELLO-WORLD" class="headerlink" title="TENSORFLOW’S HELLO WORLD"></a>TENSORFLOW’S HELLO WORLD</h1><h2 id="In-this-notebook-we-will-overview-the-basics-of-TensorFlow-learn-it’s-structures-and-see-what-is-the-motivation-to-use-it"><a href="#In-this-notebook-we-will-overview-the-basics-of-TensorFlow-learn-it’s-structures-and-see-what-is-the-motivation-to-use-it" class="headerlink" title="In this notebook we will overview the basics of TensorFlow, learn it’s structures and see what is the motivation to use it  
+  
+  "></a><strong>In this notebook we will overview the basics of TensorFlow, learn it’s structures and see what is the motivation to use it</strong>  
+  
+  </h2><p><a href="#ref2">How does TensorFlow work?</a></p>
+<ul>
+<li></li>
+</ul>
+<p><a href="#ref3">Building a Graph</a></p>
+<ul>
+<li></li>
+</ul>
+<p><a href="#ref4">Defining multidimensional arrays using TensorFlow</a></p>
+<ul>
+<li></li>
+</ul>
+<p><a href="#ref5">Why Tensors?</a></p>
+<ul>
+<li></li>
+</ul>
+<p><a href="#ref6">Variables</a></p>
+<ul>
+<li></li>
+</ul>
+<p><a href="#ref7">Placeholders</a></p>
+<ul>
+<li></li>
+</ul>
+<p><a href="#ref8">Operations</a></p>
+<p>—————-  </p>
+<h1 id="How-does-TensorFlow-work"><a href="#How-does-TensorFlow-work" class="headerlink" title="How does TensorFlow work?"></a>How does TensorFlow work?</h1><p>TensorFlow’s capability to execute the code on different devices such as CPUs and GPUs is a consequence of it’s specific structure:  </p>
+<p>TensorFlow defines computations as Graphs, and these are made with operations (also know as “ops”). So, when we work with TensorFlow, it is the same as defining a series of operations in a Graph.  </p>
+<p>To execute these operations as computations, we must launch the Graph into a Session. The session translates and passes the operations represented into the graphs to the device you want to execute them on, be it a GPU or CPU.  </p>
+<p>For example, the image below represents a graph in TensorFlow. <em>W</em>, <em>x</em> and b are tensors over the edges of this graph. <em>MatMul</em> is an operation over the tensors <em>W</em> and <em>x</em>, after that <em>Add</em> is called and add the result of the previous operator with <em>b</em>. The resultant tensors of each operation cross the next one until the end where it’s possible to get the wanted result.  </p>
+<p><img src="https://ibm.box.com/shared/static/a94cgezzwbkrq02jzfjjljrcaozu5s2q.png">  </p>
+<h3 id="Importing-TensorFlow"><a href="#Importing-TensorFlow" class="headerlink" title="Importing TensorFlow"></a>Importing TensorFlow</h3><p>To use TensorFlow, we need to import the library. We imported it and optionally gave it the name “tf”, so the modules can be accessed by <strong>tf.module-name</strong>:  </p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> tensorflow <span class="keyword">as</span> tf</span><br></pre></td></tr></table></figure>
+
+<p>—————–  </p>
+<h1 id="Building-a-Graph"><a href="#Building-a-Graph" class="headerlink" title="Building a Graph"></a>Building a Graph</h1><p>As we said before, TensorFlow works as a graph computational model. Let’s create our first graph.  </p>
+<p>To create our first graph we will utilize <strong>source operations</strong>, which do not need any information input. These source operations or <strong>source ops</strong> will pass their information to other operations which will execute computations.  </p>
+<p>To create two source operations which will output numbers we will define two constants:  </p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">a = tf.constant([<span class="number">2</span>])</span><br><span class="line">b = tf.constant([<span class="number">3</span>])</span><br></pre></td></tr></table></figure>
+
+<p>After that, let’s make an operation over these variables. The function <strong>tf.add()</strong> adds two elements (you could also use <code>c = a + b</code>).  </p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">c = tf.add(a,b)</span><br><span class="line"><span class="comment">#c = a + b is also a way to define the sum of the terms</span></span><br></pre></td></tr></table></figure>
+
+<p>Then TensorFlow needs to initialize a session to run our code. Sessions are, in a way, a context for creating a graph inside TensorFlow. Let’s define our session:  </p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">session = tf.Session()</span><br></pre></td></tr></table></figure>
+
+<p>Let’s run the session to get the result from the previous defined ‘c’ operation:  </p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">result = session.run(c)</span><br><span class="line"><span class="built_in">print</span>(result)</span><br></pre></td></tr></table></figure>
+
+<p>Close the session to release resources:  </p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">session.close()</span><br></pre></td></tr></table></figure>
+
+<p>To avoid having to close sessions every time, we can define them in a <strong>with</strong> block, so after running the <strong>with</strong> block the session will close automatically:  </p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">with</span> tf.Session() <span class="keyword">as</span> session:</span><br><span class="line">    result = session.run(c)</span><br><span class="line">    <span class="built_in">print</span>(result)</span><br></pre></td></tr></table></figure>
+
+<p>Even this silly example of adding 2 constants to reach a simple result defines the basis of TensorFlow. Define your edge (In this case our constants), include nodes (operations, like <em>tf.add</em>), and start a session to build a graph.  </p>
+<h3 id="What-is-the-meaning-of-Tensor"><a href="#What-is-the-meaning-of-Tensor" class="headerlink" title="What is the meaning of Tensor?"></a>What is the meaning of Tensor?</h3><p><strong>In TensorFlow all data is passed between operations in a computation graph, and these are passed in the form of Tensors, hence the name of TensorFlow.</strong>  </p>
+<p>The word <strong>tensor</strong> from new latin means “that which stretches”. It is a mathematical object that is named <strong>tensor</strong> because an early application of tensors was the study of materials stretching under tension. The contemporary meaning of tensors can be taken as multidimensional arrays.  </p>
+<p>That’s great, but… what are these multidimensional arrays?</p>
+<p>Going back a little bit to physics to understand the concept of dimensions:  </p>
+<p><img src="https://ibm.box.com/shared/static/ymn0hl3hf8s3xb4k15v22y5vmuodnue1.svg"></p>
+<p><a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Dimension">[Image Source]</a></p>
+<p>The zero dimension can be seen as a point, a single object or a single item.</p>
+<p>The first dimension can be seen as a line, a one-dimensional array can be seen as numbers along this line, or as points along the line. One dimension can contain infinite zero dimension&#x2F;points elements.</p>
+<p>The second dimension can be seen as a surface, a two-dimensional array can be seen as an infinite series of lines along an infinite line.</p>
+<p>The third dimension can be seen as volume, a three-dimensional array can be seen as an infinite series of surfaces along an infinite line.</p>
+<p>The Fourth dimension can be seen as the hyperspace or spacetime, a volume varying through time, or an infinite series of volumes along an infinite line. And so forth on…</p>
+<p>As mathematical objects:  </p>
+<p><img src="https://ibm.box.com/shared/static/kmxz570uai8eeg6i6ynqdz6kmlx1m422.png"></p>
+<p><a target="_blank" rel="noopener" href="https://book.mql4.com/variables/arrays">[Image Source]</a></p>
+<p>Summarizing:  </p>
+<table style="width:100%"><tbody><tr><td><b>Dimension</b></td><td><b>Physical Representation</b></td><td><b>Mathematical Object</b></td><td><b>In Code</b></td></tr><tr><td>Zero</td><td>Point</td><td>Scalar (Single Number)</td><td>[ 1 ]</td></tr><tr><td>One</td><td>Line</td><td>Vector (Series of Numbers)</td><td>[ 1,2,3,4,… ]</td></tr><tr><td>Two</td><td>Surface</td><td>Matrix (Table of Numbers)</td><td>[ [1,2,3,4,…], [1,2,3,4,…], [1,2,3,4,…],… ]</td></tr><tr><td>Three</td><td>Volume</td><td>Tensor (Cube of Numbers)</td><td>[ [[1,2,…], [1,2,…], [1,2,…],…], [[1,2,…], [1,2,…], [1,2,…],…], [[1,2,…], [1,2,…], [1,2,…] ,…]… ]</td></tr></tbody></table>
+
+<hr>
+<h1 id="Defining-multidimensional-arrays-using-TensorFlow"><a href="#Defining-multidimensional-arrays-using-TensorFlow" class="headerlink" title="Defining multidimensional arrays using TensorFlow"></a>Defining multidimensional arrays using TensorFlow</h1><p>Now we will try to define such arrays using TensorFlow:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">Scalar = tf.constant([<span class="number">2</span>])</span><br><span class="line">Vector = tf.constant([<span class="number">5</span>,<span class="number">6</span>,<span class="number">2</span>])</span><br><span class="line">Matrix = tf.constant([[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>],[<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>],[<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>]])</span><br><span class="line">Tensor = tf.constant( [ [[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>],[<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>],[<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>]] , [[<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>],[<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>],[<span class="number">6</span>,<span class="number">7</span>,<span class="number">8</span>]] , [[<span class="number">7</span>,<span class="number">8</span>,<span class="number">9</span>],[<span class="number">8</span>,<span class="number">9</span>,<span class="number">10</span>],[<span class="number">9</span>,<span class="number">10</span>,<span class="number">11</span>]] ] )</span><br><span class="line"><span class="keyword">with</span> tf.Session() <span class="keyword">as</span> session:</span><br><span class="line">    result = session.run(Scalar)</span><br><span class="line">    <span class="built_in">print</span> (<span class="string">&quot;Scalar (1 entry):\n %s \n&quot;</span> % result)</span><br><span class="line">    result = session.run(Vector)</span><br><span class="line">    <span class="built_in">print</span> (<span class="string">&quot;Vector (3 entries) :\n %s \n&quot;</span> % result)</span><br><span class="line">    result = session.run(Matrix)</span><br><span class="line">    <span class="built_in">print</span> (<span class="string">&quot;Matrix (3x3 entries):\n %s \n&quot;</span> % result)</span><br><span class="line">    result = session.run(Tensor)</span><br><span class="line">    <span class="built_in">print</span> (<span class="string">&quot;Tensor (3x3x3 entries) :\n %s \n&quot;</span> % result)</span><br></pre></td></tr></table></figure>
+
+<p>Now that you understand these data structures, I encourage you to play with them using some previous functions to see how they will behave, according to their structure types:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">Matrix_one = tf.constant([[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>],[<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>],[<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>]])</span><br><span class="line">Matrix_two = tf.constant([[<span class="number">2</span>,<span class="number">2</span>,<span class="number">2</span>],[<span class="number">2</span>,<span class="number">2</span>,<span class="number">2</span>],[<span class="number">2</span>,<span class="number">2</span>,<span class="number">2</span>]])</span><br><span class="line"></span><br><span class="line">first_operation = tf.add(Matrix_one, Matrix_two)</span><br><span class="line">second_operation = Matrix_one + Matrix_two</span><br><span class="line"></span><br><span class="line"><span class="keyword">with</span> tf.Session() <span class="keyword">as</span> session:</span><br><span class="line">    result = session.run(first_operation)</span><br><span class="line">    <span class="built_in">print</span> (<span class="string">&quot;Defined using tensorflow function :&quot;</span>)</span><br><span class="line">    <span class="built_in">print</span>(result)</span><br><span class="line">    result = session.run(second_operation)</span><br><span class="line">    <span class="built_in">print</span> (<span class="string">&quot;Defined using normal expressions :&quot;</span>)</span><br><span class="line">    <span class="built_in">print</span>(result)</span><br></pre></td></tr></table></figure>
+
+<p>With the regular symbol definition and also the TensorFlow function we were able to get an element-wise multiplication, also known as Hadamard product.  </p>
+<p>But what if we want the regular matrix product?</p>
+<p>We then need to use another TensorFlow function called <strong>tf.matmul()</strong>:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">Matrix_one = tf.constant([[<span class="number">2</span>,<span class="number">3</span>],[<span class="number">3</span>,<span class="number">4</span>]])</span><br><span class="line">Matrix_two = tf.constant([[<span class="number">2</span>,<span class="number">3</span>],[<span class="number">3</span>,<span class="number">4</span>]])</span><br><span class="line"></span><br><span class="line">first_operation = tf.matmul(Matrix_one, Matrix_two)</span><br><span class="line"></span><br><span class="line"><span class="keyword">with</span> tf.Session() <span class="keyword">as</span> session:</span><br><span class="line">    result = session.run(first_operation)</span><br><span class="line">    <span class="built_in">print</span> (<span class="string">&quot;Defined using tensorflow function :&quot;</span>)</span><br><span class="line">    <span class="built_in">print</span>(result)</span><br></pre></td></tr></table></figure>
+
+<p>We could also define this multiplication ourselves, but there is a function that already does that, so no need to reinvent the wheel!</p>
+<hr>
+<h1 id="Why-Tensors"><a href="#Why-Tensors" class="headerlink" title="Why Tensors?"></a>Why Tensors?</h1><p>The Tensor structure helps us by giving the freedom to shape the dataset the way we want.</p>
+<p>And it is particularly helpful when dealing with images, due to the nature of how information in images are encoded,</p>
+<p>Thinking about images, its easy to understand that it has a height and width, so it would make sense to represent the information contained in it with a two dimensional strucutre (a matrix)… until you remember that images have colors, and to add information about the colors, we need another dimension, and thats when Tensors become particulary helpful.</p>
+<p>Images are encoded into color channels, the image data is represented into each color intensity in a color channel at a given point, the most common one being RGB, which means Red, Blue and Green. The information contained into an image is the intensity of each channel color into the width and height of the image, just like this:</p>
+<p><img src="https://ibm.box.com/shared/static/xlpv9h5xws248c09k1rlx7cer69y4grh.png"></p>
+<p><a target="_blank" rel="noopener" href="https://msdn.microsoft.com/en-us/library/windows/desktop/dn424131.aspx">[Image Source]</a></p>
+<p>So the intensity of the red channel at each point with width and height can be represented into a matrix, the same goes for the blue and green channels, so we end up having three matrices, and when these are combined they form a tensor.</p>
+<hr>
+<h1 id="Variables"><a href="#Variables" class="headerlink" title="Variables"></a>Variables</h1><p>Now that we are more familiar with the structure of data, we will take a look at how TensorFlow handles variables.</p>
+<p>To define variables we use the command <strong>tf.variable()</strong>.<br>To be able to use variables in a computation graph it is necessary to initialize them before running the graph in a session. This is done by running <strong>tf.global_variables_initializer()</strong>.</p>
+<p>To update the value of a variable, we simply run an assign operation that assigns a value to the variable:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">state = tf.Variable(<span class="number">0</span>)</span><br></pre></td></tr></table></figure>
+
+<p>Let’s first create a simple counter, a variable that increases one unit at a time:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">one = tf.constant(<span class="number">1</span>)</span><br><span class="line">new_value = tf.add(state, one)</span><br><span class="line">update = tf.assign(state, new_value)</span><br></pre></td></tr></table></figure>
+
+<p>Variables must be initialized by running an initialization operation after having launched the graph. We first have to add the initialization operation to the graph:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">init_op = tf.global_variables_initializer()</span><br></pre></td></tr></table></figure>
+
+<p>We then start a session to run the graph, first initialize the variables, then print the initial value of the <strong>state</strong> variable, and then run the operation of updating the <strong>state</strong> variable and printing the result after each update:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">with</span> tf.Session() <span class="keyword">as</span> session:</span><br><span class="line">  session.run(init_op)</span><br><span class="line">  <span class="built_in">print</span>(session.run(state))</span><br><span class="line">  <span class="keyword">for</span> _ <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">3</span>):</span><br><span class="line">    session.run(update)</span><br><span class="line">    <span class="built_in">print</span>(session.run(state))</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h1 id="Placeholders"><a href="#Placeholders" class="headerlink" title="Placeholders"></a>Placeholders</h1><p>Now we know how to manipulate variables inside TensorFlow, but what about feeding data outside of a TensorFlow model?</p>
+<p>If you want to feed data to a TensorFlow model from outside a model, you will need to use placeholders.</p>
+<p>So what are these placeholders and what do they do?</p>
+<p>Placeholders can be seen as “holes” in your model, “holes” which you will pass the data to, you can create them using<br><strong>tf.placeholder(<em>datatype</em>)</strong>, where <strong><em>datatype</em></strong> specifies the type of data (integers, floating points, strings, booleans) along with its precision (8, 16, 32, 64) bits.</p>
+<p>The definition of each data type with the respective python sintax is defined as:</p>
+<table>
+<thead>
+<tr>
+<th>Data type</th>
+<th>Python type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>DT_FLOAT</td>
+<td>tf.float32</td>
+<td>32 bits floating point.</td>
+</tr>
+<tr>
+<td>DT_DOUBLE</td>
+<td>tf.float64</td>
+<td>64 bits floating point.</td>
+</tr>
+<tr>
+<td>DT_INT8</td>
+<td>tf.int8</td>
+<td>8 bits signed integer.</td>
+</tr>
+<tr>
+<td>DT_INT16</td>
+<td>tf.int16</td>
+<td>16 bits signed integer.</td>
+</tr>
+<tr>
+<td>DT_INT32</td>
+<td>tf.int32</td>
+<td>32 bits signed integer.</td>
+</tr>
+<tr>
+<td>DT_INT64</td>
+<td>tf.int64</td>
+<td>64 bits signed integer.</td>
+</tr>
+<tr>
+<td>DT_UINT8</td>
+<td>tf.uint8</td>
+<td>8 bits unsigned integer.</td>
+</tr>
+<tr>
+<td>DT_STRING</td>
+<td>tf.string</td>
+<td>Variable length byte arrays. Each element of a Tensor is a byte array.</td>
+</tr>
+<tr>
+<td>DT_BOOL</td>
+<td>tf.bool</td>
+<td>Boolean.</td>
+</tr>
+<tr>
+<td>DT_COMPLEX64</td>
+<td>tf.complex64</td>
+<td>Complex number made of two 32 bits floating points: real and imaginary parts.</td>
+</tr>
+<tr>
+<td>DT_COMPLEX128</td>
+<td>tf.complex128</td>
+<td>Complex number made of two 64 bits floating points: real and imaginary parts.</td>
+</tr>
+<tr>
+<td>DT_QINT8</td>
+<td>tf.qint8</td>
+<td>8 bits signed integer used in quantized Ops.</td>
+</tr>
+<tr>
+<td>DT_QINT32</td>
+<td>tf.qint32</td>
+<td>32 bits signed integer used in quantized Ops.</td>
+</tr>
+<tr>
+<td>DT_QUINT8</td>
+<td>tf.quint8</td>
+<td>8 bits unsigned integer used in quantized Ops.</td>
+</tr>
+</tbody></table>
+<p><a target="_blank" rel="noopener" href="https://www.tensorflow.org/versions/r0.9/resources/dims_types.html">[Table Source]</a></p>
+<p>So we create a placeholder:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a = tf.placeholder(tf.float32)</span><br></pre></td></tr></table></figure>
+
+<p>And define a simple multiplication operation:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">b = a*<span class="number">2</span></span><br></pre></td></tr></table></figure>
+
+<p>Now we need to define and run the session, but since we created a “hole” in the model to pass the data, when we initialize the session we are obligated to pass an argument with the data, otherwise we would get an error.</p>
+<p>To pass the data to the model we call the session with an extra argument <strong>feed_dict</strong> in which we should pass a dictionary with each placeholder name folowed by its respective data, just like this:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">with</span> tf.Session() <span class="keyword">as</span> sess:</span><br><span class="line">    result = sess.run(b,feed_dict=&#123;a:<span class="number">3.5</span>&#125;)</span><br><span class="line">    <span class="built_in">print</span> (result)</span><br></pre></td></tr></table></figure>
+
+<p>Since data in TensorFlow is passed in form of multidimensional arrays we can pass any kind of tensor through the placeholders to get the answer to the simple multiplication operation:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">dictionary=&#123;a: [ [ [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>],[<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>],[<span class="number">7</span>,<span class="number">8</span>,<span class="number">9</span>],[<span class="number">10</span>,<span class="number">11</span>,<span class="number">12</span>] ] , [ [<span class="number">13</span>,<span class="number">14</span>,<span class="number">15</span>],[<span class="number">16</span>,<span class="number">17</span>,<span class="number">18</span>],[<span class="number">19</span>,<span class="number">20</span>,<span class="number">21</span>],[<span class="number">22</span>,<span class="number">23</span>,<span class="number">24</span>] ] ] &#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">with</span> tf.Session() <span class="keyword">as</span> sess:</span><br><span class="line">    result = sess.run(b,feed_dict=dictionary)</span><br><span class="line">    <span class="built_in">print</span> (result)</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h1 id="Operations"><a href="#Operations" class="headerlink" title="Operations"></a>Operations</h1><p>Operations are nodes that represent the mathematical operations over the tensors on a graph. These operations can be any kind of functions, like add and subtract tensor or maybe an activation function.</p>
+<p><em>tf.matmul</em>, <em>tf.add</em>, <em>tf.nn.sigmoid</em> are some of the operations in TensorFlow. These are like functions in python but operate directly over tensors and each one does a specific thing.</p>
+<p>Other operations can be easily found in: <a target="_blank" rel="noopener" href="https://www.tensorflow.org/versions/r0.9/api_docs/python/index.html">https://www.tensorflow.org/versions/r0.9/api_docs&#x2F;python&#x2F;index.html</a></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">a = tf.constant([<span class="number">5</span>])</span><br><span class="line">b = tf.constant([<span class="number">2</span>])</span><br><span class="line">c = tf.add(a,b)</span><br><span class="line">d = tf.subtract(a,b)</span><br><span class="line"></span><br><span class="line"><span class="keyword">with</span> tf.Session() <span class="keyword">as</span> session:</span><br><span class="line">    result = session.run(c)</span><br><span class="line">    <span class="built_in">print</span> (<span class="string">&#x27;c =: %s&#x27;</span> % result)</span><br><span class="line">    result = session.run(d)</span><br><span class="line">    <span class="built_in">print</span> (<span class="string">&#x27;d =: %s&#x27;</span> % result)</span><br></pre></td></tr></table></figure>
+
+<p><em>tf.nn.sigmoid</em> is an activiation function, it’s a little more complicated, but this function helps learning models to evaluate what kind of information is good or not.</p>
+<hr>
+<h2 id="Want-to-learn-more"><a href="#Want-to-learn-more" class="headerlink" title="Want to learn more?"></a>Want to learn more?</h2><p>Running deep learning programs usually needs a high performance platform. PowerAI speeds up deep learning and AI. Built on IBM’s Power Systems, PowerAI is a scalable software platform that accelerates deep learning and AI with blazing performance for individual users or enterprises. The PowerAI platform supports popular machine learning libraries and dependencies including Tensorflow, Caffe, Torch, and Theano. You can download a <a target="_blank" rel="noopener" href="https://cocl.us/ML0120EN_PAI">free version of PowerAI</a>.</p>
+<p>Also, you can use Data Science Experience to run these notebooks faster with bigger datasets. Data Science Experience is IBM’s leading cloud solution for data scientists, built by data scientists. With Jupyter notebooks, RStudio, Apache Spark and popular libraries pre-packaged in the cloud, DSX enables data scientists to collaborate on their projects without having to install anything. Join the fast-growing community of DSX users today with a free account at <a target="_blank" rel="noopener" href="https://cocl.us/ML0120EN_DSX">Data Science Experience</a>This is the end of this lesson. Hopefully, now you have a deeper and intuitive understanding regarding the LSTM model. Thank you for reading this notebook, and good luck on your studies.</p>
+<h3 id="Thanks-for-completing-this-lesson"><a href="#Thanks-for-completing-this-lesson" class="headerlink" title="Thanks for completing this lesson!"></a>Thanks for completing this lesson!</h3><p>Notebook created by: <a target="_blank" rel="noopener" href="https://ca.linkedin.com/in/rafaelblsilva">Rafael Belo Da Silva</a></p>
+<h3 id="References"><a href="#References" class="headerlink" title="References:"></a>References:</h3><p><a target="_blank" rel="noopener" href="https://www.tensorflow.org/versions/r0.9/get_started/index.html">https://www.tensorflow.org/versions/r0.9/get_started&#x2F;index.html</a>  </p>
+<p><a target="_blank" rel="noopener" href="http://jrmeyer.github.io/tutorial/2016/02/01/TensorFlow-Tutorial.html">http://jrmeyer.github.io/tutorial/2016/02/01/TensorFlow-Tutorial.html</a>  </p>
+<p><a target="_blank" rel="noopener" href="https://www.tensorflow.org/versions/r0.9/api_docs/python/index.html">https://www.tensorflow.org/versions/r0.9/api_docs&#x2F;python&#x2F;index.html</a>  </p>
+<p><a target="_blank" rel="noopener" href="https://www.tensorflow.org/versions/r0.9/resources/dims_types.html">https://www.tensorflow.org/versions/r0.9/resources/dims_types.html</a>  </p>
+<p><a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Dimension">https://en.wikipedia.org/wiki/Dimension</a>  </p>
+<p><a target="_blank" rel="noopener" href="https://book.mql4.com/variables/arrays">https://book.mql4.com/variables/arrays</a>  </p>
+<p><a target="_blank" rel="noopener" href="https://msdn.microsoft.com/en-us/library/windows/desktop/dn424131(v=vs.85).aspx">https://msdn.microsoft.com/en-us/library/windows/desktop/dn424131(v=vs.85).aspx</a>  </p>
+<hr>
+<p>Copyright © 2016 <a target="_blank" rel="noopener" href="https://bigdatauniversity.com/?utm_source=bducopyrightlink&utm_medium=dswb&utm_campaign=bdu">Big Data University</a>. This notebook and its source code are released under the terms of the <a target="_blank" rel="noopener" href="https://bigdatauniversity.com/mit-license/">MIT License</a>.</p>
+
+            </div>
+        
+        <footer class="article-footer">
+        </footer>
+    </div>
+</article>
+
+
+    
+<nav id="article-nav">
+    
+        <a href="/EM%E6%BC%94%E7%AE%97%E6%B3%95/" id="article-nav-newer" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">上一篇</strong>
+            <div class="article-nav-title">
+                
+                    EM演算法
+                
+            </div>
+        </a>
+    
+    
+        <a href="/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">下一篇</strong>
+            <div class="article-nav-title">Hello World</div>
+        </a>
+    
+</nav>
+
+
+
+
+
+    
+    
+        <section id="comments"> <script src="https://giscus.app/client.js"
+    data-repo="CaoCharles/CaoCharles.github.io"
+    data-repo-id="MDEwOlJlcG9zaXRvcnkxNDYyNjQyMDM="
+    data-category="Announcements"
+    data-category-id="DIC_kwDOCLfQi84DBhE9"
+    data-mapping="pathname"
+    data-strict="0"
+    data-reactions-enabled="1"
+    data-emit-metadata="0"
+    data-input-position="bottom"
+    data-theme="preferred_color_scheme"
+    data-lang="zh-TW"
+    crossorigin="anonymous"
+    async>
+</script>
+ </section>
+    
+
+
+
+
+<!-- baidu url auto push script -->
+<script type="text/javascript">
+    !function(){var e=/([http|https]:\/\/[a-zA-Z0-9\_\.]+\.baidu\.com)/gi,r=window.location.href,o=document.referrer;if(!e.test(r)){var n="//api.share.baidu.com/s.gif";o?(n+="?r="+encodeURIComponent(document.referrer),r&&(n+="&l="+r)):r&&(n+="?l="+r);var t=new Image;t.src=n}}(window);
+</script>     
+</section>
+        </div>
+        <footer id="footer">
+    <div class="outer">
+        <div id="footer-info" class="inner">
+            查爾斯 &copy; 2026 
+            <a rel="license noopener" target="_blank" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/80x15.png" /></a>
+            <br> Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>. Theme - <a target="_blank" rel="noopener" href="https://github.com/zthxxx/hexo-theme-Wikitten">wikitten</a>
+            
+                <br>
+                <span id="busuanzi_container_site_pv"><i class="fa fa-eye"></i> <span id="busuanzi_value_site_pv"></span></span>
+                &nbsp;|&nbsp;
+                <span id="busuanzi_container_site_pv"><i class="fa fa-user"></i> <span id="busuanzi_value_site_uv"></span></span>
+            
+        </div>
+    </div>
+</footer>
+
+        
+
+    
+        
+<script src="/libs/lightgallery/js/lightgallery.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-thumbnail.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-pager.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-autoplay.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-fullscreen.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-zoom.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-hash.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-share.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-video.min.js"></script>
+
+    
+    
+        
+<script src="/libs/justified-gallery/jquery.justifiedGallery.min.js"></script>
+
+    
+    
+        <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true,
+            TeX: {
+                equationNumbers: {
+                  autoNumber: 'AMS'
+                }
+            }
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script async src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+
+
+
+<!-- Custom Scripts -->
+
+<script src="/js/main.js"></script>
+
+
+    </div>
+</body>
+</html>
