@@ -1,0 +1,96 @@
+# Wikitten theme configuration
+# https://github.com/zthxxx/hexo-theme-Wikitten
+
+# Menus
+menu:
+  首頁: /
+  分類: /categories
+  標籤: /tags
+  關於: /about
+
+# Customize
+customize:
+    logo:
+        enabled: false
+        width: 40
+        height: 40
+        url: /logo.png
+    profile:
+        enabled: true
+        avatar: css/images/avatar.png
+        gravatar:
+        author: CaoCharles
+        author_title: AI Programmer
+        location: Taipei, Taiwan
+        follow: https://github.com/caocharles/
+    highlight: monokai
+    sidebar: left
+    category_perExpand: false
+    thumbnail: true
+    favicon: /css/images/favicon.ico
+    default_index_file:
+    social_links:
+        github: https://github.com/caocharles/
+        facebook: https://www.facebook.com/choun811365/
+        rss: /atom.xml
+    social_link_tooltip: true
+
+# Widgets
+widgets:
+    - category
+    - tag
+    - tagcloud
+
+# Excerpt
+auto_excerpt:
+    enable: true
+    lines: 5
+
+# Search
+search:
+    insight: true
+    swiftype:
+    baidu: false
+
+# History version
+history_control:
+    enable: false
+    server_link: https://github.com
+    user: caocharles
+    repertory: CaoCharles.github.io
+    branch: hexo-source
+
+# Comment
+comment:
+    disqus:
+    duoshuo:
+    youyan:
+    giscus:
+        repo: CaoCharles/CaoCharles.github.io
+        repo_id: ''
+        category: 'Announcements'
+        category_id: ''
+        mapping: pathname
+        theme: light
+
+# Share
+share: default
+
+# Plugins
+plugins:
+    lightgallery: true
+    justifiedgallery: true
+    mathjax: true
+    google_analytics:
+    google_site_verification:
+    baidu_analytics:
+    busuanzi_count: true
+
+# Miscellaneous
+miscellaneous:
+    open_graph:
+        fb_app_id:
+        fb_admins:
+        twitter_id:
+        google_plus:
+    links:
