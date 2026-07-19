@@ -81,6 +81,7 @@ plugins:
     lightgallery: true
     justifiedgallery: true
     mathjax: true
+    canvas_nest: true
     google_analytics:
     google_site_verification:
     baidu_analytics:
