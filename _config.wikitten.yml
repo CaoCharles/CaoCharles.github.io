@@ -67,11 +67,11 @@ comment:
     youyan:
     giscus:
         repo: CaoCharles/CaoCharles.github.io
-        repo_id: ''
+        repo_id: 'MDEwOlJlcG9zaXRvcnkxNDYyNjQyMDM='
         category: 'Announcements'
-        category_id: ''
+        category_id: 'DIC_kwDOCLfQi84DBhE9'
         mapping: pathname
-        theme: light
+        theme: preferred_color_scheme
 
 # Share
 share: default
