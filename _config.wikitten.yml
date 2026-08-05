@@ -27,7 +27,7 @@ customize:
     sidebar: left
     category_perExpand: false
     thumbnail: true
-    favicon: /css/images/favicon.ico
+    favicon: /favicon.ico
     default_index_file:
     social_links:
         github: https://github.com/caocharles/
