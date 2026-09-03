@@ -8,6 +8,9 @@
     <% if (theme.plugins.google_analytics) { %>
         <%- partial('plugin/google-analytics') %>
     <% } %>
+    <% if (theme.plugins.google_adsense_client) { %>
+        <%- partial('plugin/google-adsense') %>
+    <% } %>
     <% if (theme.plugins.google_site_verification) { %>
         <meta name="google-site-verification" content="<%= theme.plugins.google_site_verification %>" />
     <% } %>

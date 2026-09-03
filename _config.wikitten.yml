@@ -84,6 +84,7 @@ plugins:
     canvas_nest: true
     google_analytics:
     google_site_verification:
+    google_adsense_client: ca-pub-1064962745792709
     baidu_analytics:
     busuanzi_count: true
 
